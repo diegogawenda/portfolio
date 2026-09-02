@@ -1,3 +1,9 @@
 .DS_Store
 node_modules/
 .playwright-mcp/
+qa-report/
+qa-results.json
+qa-results-raw.json
+playwright-report/
+test-results/
+/*.png

@@ -16,8 +16,11 @@
     <div class="container header-inner">
       <a href="#top" class="logo">DG<span class="dot">.</span></a>
       <nav class="nav" id="nav">
+        <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
+        <a href="#qa-lab">QA Lab</a>
         <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -27,18 +30,26 @@
   </header>
 
   <main id="top">
+
+    <!-- Hero -->
     <section class="hero container">
-      <p class="eyebrow">Montevideo, Uruguay · Remote (GMT-3)</p>
-      <h1>Diego Gawenda</h1>
-      <p class="hero-title">Staff QA Software Engineer &mdash; AI-Augmented Quality Engineering Leader</p>
-      <p class="hero-summary">
-        15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS.
-        Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50%
-        through shift-left practices and AI-augmented test design.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="https://linkedin.com/in/diegogawenda" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="hero-copy">
+        <p class="eyebrow">Staff QA Software Engineer</p>
+        <h1>Diego Gawenda</h1>
+        <p class="hero-tagline">Quality is a system, not a checklist.</p>
+        <p class="hero-summary">
+          15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS.
+          Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50%
+          through shift-left practices and AI-augmented test design.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="https://linkedin.com/in/diegogawenda" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="assets/Diego-Gawenda-CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/headshot.jpg" alt="Portrait of Diego Gawenda" width="360" height="360" />
       </div>
     </section>
 
@@ -65,121 +76,274 @@
       </div>
     </section>
 
-    <section id="expertise" class="expertise container">
-      <h2 class="section-title">Expertise</h2>
-      <p class="section-subtitle">Four pillars built across fintech and SaaS engineering teams.</p>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Test Strategy &amp; Leadership</h3>
-          <p>Defining production-readiness criteria and testing culture for growing engineering teams.</p>
-          <ul class="tag-list">
-            <li>Test Strategy</li><li>Test Architecture</li><li>Shift-Left Testing</li>
-            <li>Risk-Based Testing</li><li>AI-Augmented Testing</li><li>Team Scaling</li>
-            <li>Stakeholder Management</li><li>Quality Metrics</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Automation Engineering</h3>
-          <p>Frameworks built from zero across web and mobile ecosystems, wired into CI/CD.</p>
-          <ul class="tag-list">
-            <li>TypeScript</li><li>JavaScript</li><li>Java</li><li>Playwright</li>
-            <li>Cypress</li><li>Selenium</li><li>WebdriverIO</li><li>Detox</li><li>Maestro</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>API, Data &amp; Contracts</h3>
-          <p>Coverage beyond the UI — services, contracts, and the data behind them.</p>
-          <ul class="tag-list">
-            <li>API Testing</li><li>REST Assured</li><li>Postman</li>
-            <li>Contract Testing</li><li>SQL</li><li>Cucumber</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Delivery &amp; Quality Gates</h3>
-          <p>CI/CD pipelines and quality gates embedded directly into engineering workflows.</p>
-          <ul class="tag-list">
-            <li>CI/CD</li><li>GitHub Actions</li><li>Docker</li>
-            <li>Test Data Management</li><li>Performance Testing</li><li>Accessibility (a11y)</li>
-          </ul>
+    <!-- About -->
+    <section id="about" class="band">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-numbered"><span class="num">01</span> A little about me</p>
+        <h2 class="statement">I build quality into the system, not bolted onto the end.</h2>
+        <p class="lede">
+          My career has moved from hands-on manual and automated testing toward test strategy, automation
+          architecture, and team scaling — always with the same question at the center: how do we catch problems
+          before they reach production, without slowing engineering down? That question has taken me from a
+          10-person distributed QA team at a UK manufacturing software company to building automation frameworks
+          from zero at two different startups, to leading quality for a fintech unicorn's multiple product squads.
+        </p>
+        <a href="#experience" class="text-link">My professional journey →</a>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section id="expertise" class="band band-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">02</span> Expertise</p>
+        <h2 class="statement">Quality from every angle.</h2>
+        <div class="card-grid">
+          <div class="card">
+            <span class="card-num">01</span>
+            <h3>Test Strategy &amp; Leadership</h3>
+            <p>Defining production-readiness criteria and testing culture for growing engineering teams.</p>
+            <ul class="tag-list">
+              <li>Test Strategy</li><li>Test Architecture</li><li>Shift-Left Testing</li>
+              <li>Risk-Based Testing</li><li>AI-Augmented Testing</li><li>Team Scaling</li>
+              <li>Stakeholder Management</li><li>Quality Metrics</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="card-num">02</span>
+            <h3>Automation Engineering</h3>
+            <p>Frameworks built from zero across web and mobile ecosystems, wired into CI/CD.</p>
+            <ul class="tag-list">
+              <li>TypeScript</li><li>JavaScript</li><li>Java</li><li>Playwright</li>
+              <li>Cypress</li><li>Selenium</li><li>WebdriverIO</li><li>Detox</li><li>Maestro</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="card-num">03</span>
+            <h3>API, Data &amp; Contracts</h3>
+            <p>Coverage beyond the UI — services, contracts, and the data behind them.</p>
+            <ul class="tag-list">
+              <li>API Testing</li><li>REST Assured</li><li>Postman</li>
+              <li>Contract Testing</li><li>SQL</li><li>Cucumber</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="card-num">04</span>
+            <h3>Delivery &amp; Quality Gates</h3>
+            <p>CI/CD pipelines and quality gates embedded directly into engineering workflows.</p>
+            <ul class="tag-list">
+              <li>CI/CD</li><li>GitHub Actions</li><li>Docker</li>
+              <li>Test Data Management</li><li>Performance Testing</li><li>Accessibility (a11y)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="experience container">
-      <h2 class="section-title">Experience</h2>
-      <ol class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-role">Staff SDET</span>
-            <span class="timeline-company">Flex</span>
-            <span class="timeline-date">Feb 2024 &ndash; Present</span>
+    <!-- QA Lab -->
+    <section id="qa-lab" class="band band-dark">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">03</span> QA Lab</p>
+        <h2 class="statement">This portfolio tests itself.</h2>
+        <p class="lede lede-dark">
+          A real Playwright suite runs against this site on every deploy — navigation, responsiveness,
+          accessibility, and the live metrics you scrolled past above. No hand-picked numbers: what's below is
+          whatever the last CI run produced.
+        </p>
+
+        <div class="qa-panel">
+          <div class="qa-stats" id="qaStats">
+            <div class="qa-stat"><span class="qa-stat-value" id="qaTotal">—</span><span class="qa-stat-label">Tests</span></div>
+            <div class="qa-stat"><span class="qa-stat-value" id="qaBrowsers">—</span><span class="qa-stat-label">Browsers</span></div>
+            <div class="qa-stat"><span class="qa-stat-value" id="qaPassRate">—</span><span class="qa-stat-label">Pass rate</span></div>
           </div>
-          <ul>
-            <li>Reduced regression testing time by 75% by integrating a mobile automation suite into GitHub Actions, enabling daily release cycles instead of weekly.</li>
-            <li>Increased release predictability by 80% by rebuilding the QA workload estimation process.</li>
-            <li>Cut functional testing rework by 20% by introducing shift-left testing practices.</li>
+          <ul class="qa-test-list" id="qaTestList" aria-live="polite">
+            <li class="qa-test-placeholder">Loading latest results…</li>
           </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-role">Senior SDET</span>
-            <span class="timeline-company">Almanac</span>
-            <span class="timeline-date">Jul 2022 &ndash; Dec 2023</span>
+          <div class="qa-panel-footer">
+            <span id="qaUpdated" class="qa-updated"></span>
+            <div class="qa-panel-links">
+              <a href="qa-report/index.html" class="text-link text-link-dark">View full report ↗</a>
+              <a href="https://github.com/diegogawenda/portfolio/blob/main/tests/site.spec.js" class="text-link text-link-dark" target="_blank" rel="noopener">View suite on GitHub ↗</a>
+            </div>
           </div>
-          <ul>
-            <li>Improved team productivity by 50% by building an end-to-end Playwright automation framework from scratch.</li>
-            <li>Reduced defects reaching QA by 20% by embedding automated checks earlier in the pipeline.</li>
-          </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-role">QA Lead / Senior SDET</span>
-            <span class="timeline-company">dLocal</span>
-            <span class="timeline-date">Oct 2020 &ndash; Jul 2022</span>
-          </div>
-          <ul>
-            <li>Increased automation ROI by 80% by eliminating low-value flaky tests through daily monitoring.</li>
-            <li>Led and coached a QA team of 12 engineers across multiple product squads.</li>
-          </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-role">QA Lead</span>
-            <span class="timeline-company">The Appraisal Lane</span>
-            <span class="timeline-date">Jun 2016 &ndash; Aug 2020</span>
-          </div>
-          <ul>
-            <li>Reduced production issues by 50% by rolling out QA processes for a team built from zero to 10 engineers.</li>
-            <li>Cut rework from 40% to 20% by defining clearer acceptance criteria and definition-of-done standards.</li>
-          </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-role">QA Manager / Senior QA Engineer</span>
-            <span class="timeline-company">Greycon</span>
-            <span class="timeline-date">Aug 2007 &ndash; Jun 2016</span>
-          </div>
-          <ul>
-            <li>Reduced development error rate by 40% by introducing root-cause analysis into defect resolution.</li>
-            <li>Managed a distributed QA team of 10 engineers across multiple countries.</li>
-          </ul>
-        </li>
-      </ol>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact container">
-      <h2 class="section-title">Let's talk</h2>
-      <p class="section-subtitle">Open to Staff/Lead QA and Quality Engineering opportunities.</p>
-      <div class="contact-links">
-        <a href="mailto:diegogawenda@gmail.com" class="btn btn-primary">diegogawenda@gmail.com</a>
-        <a href="https://linkedin.com/in/diegogawenda" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- How I work -->
+    <section class="band">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">04</span> How I work</p>
+        <h2 class="statement">I take ownership of quality, end to end.</h2>
+        <div class="how-grid">
+          <div class="how-card">
+            <h3>Strategy</h3>
+            <p>Define production-readiness criteria and shift-left practices before a single line of test code is written.</p>
+          </div>
+          <div class="how-card">
+            <h3>Execution</h3>
+            <p>Build automation frameworks from zero and wire them into CI/CD as real quality gates, not afterthoughts.</p>
+          </div>
+          <div class="how-card">
+            <h3>Scaling</h3>
+            <p>Grow and coach QA teams, aligning strategy and standards across every product squad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="band band-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">05</span> Experience</p>
+        <h2 class="statement">A career built around quality.</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">Staff SDET</span>
+              <span class="timeline-company">Flex</span>
+              <span class="timeline-date">Feb 2024 &ndash; Present</span>
+            </div>
+            <ul>
+              <li>Reduced regression testing time by 75% by integrating a mobile automation suite into GitHub Actions, enabling daily release cycles instead of weekly.</li>
+              <li>Increased release predictability by 80% by rebuilding the QA workload estimation process.</li>
+              <li>Cut functional testing rework by 20% by introducing shift-left testing practices.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">Senior SDET</span>
+              <span class="timeline-company">Almanac</span>
+              <span class="timeline-date">Jul 2022 &ndash; Dec 2023</span>
+            </div>
+            <ul>
+              <li>Improved team productivity by 50% by building an end-to-end Playwright automation framework from scratch.</li>
+              <li>Reduced defects reaching QA by 20% by embedding automated checks earlier in the pipeline.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">QA Lead / Senior SDET</span>
+              <span class="timeline-company">dLocal</span>
+              <span class="timeline-date">Oct 2020 &ndash; Jul 2022</span>
+            </div>
+            <ul>
+              <li>Increased automation ROI by 80% by eliminating low-value flaky tests through daily monitoring.</li>
+              <li>Led and coached a QA team of 12 engineers across multiple product squads.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">QA Lead</span>
+              <span class="timeline-company">The Appraisal Lane</span>
+              <span class="timeline-date">Jun 2016 &ndash; Aug 2020</span>
+            </div>
+            <ul>
+              <li>Reduced production issues by 50% by rolling out QA processes for a team built from zero to 10 engineers.</li>
+              <li>Cut rework from 40% to 20% by defining clearer acceptance criteria and definition-of-done standards.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-role">QA Manager / Senior QA Engineer</span>
+              <span class="timeline-company">Greycon</span>
+              <span class="timeline-date">Aug 2007 &ndash; Jun 2016</span>
+            </div>
+            <ul>
+              <li>Reduced development error rate by 40% by introducing root-cause analysis into defect resolution.</li>
+              <li>Managed a distributed QA team of 10 engineers across multiple countries.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Selected work / case studies -->
+    <section id="work" class="band band-dark">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">06</span> Selected work</p>
+        <h2 class="statement">Three problems, three systems built to solve them.</h2>
+        <div class="case-grid">
+          <article class="case-study">
+            <span class="case-tag">Case study — Flex</span>
+            <h3>Daily releases at fintech speed</h3>
+            <p><strong>Challenge:</strong> A rent-payment fintech shipping weekly, with mobile regression eating days before every release.</p>
+            <p><strong>Approach:</strong> Designed and integrated a mobile automation suite directly into GitHub Actions, rebuilt the QA workload estimation process, and introduced shift-left checks earlier in development.</p>
+            <p><strong>Outcome:</strong> Regression time cut 75%, unlocking daily release cycles instead of weekly, with 80% more predictable delivery forecasts.</p>
+            <span class="case-metric">75% faster regression → daily releases</span>
+          </article>
+          <article class="case-study">
+            <span class="case-tag">Case study — Almanac</span>
+            <h3>Automation built from zero</h3>
+            <p><strong>Challenge:</strong> An async collaboration platform relying entirely on manual regression testing, slowing every release.</p>
+            <p><strong>Approach:</strong> Built an end-to-end Playwright/TypeScript automation framework from scratch and embedded automated checks earlier in the development pipeline.</p>
+            <p><strong>Outcome:</strong> Team productivity improved 50%, with 20% fewer defects reaching QA.</p>
+            <span class="case-metric">0 → full E2E framework, 50% productivity gain</span>
+          </article>
+          <article class="case-study">
+            <span class="case-tag">Case study — dLocal</span>
+            <h3>Scaling quality across squads</h3>
+            <p><strong>Challenge:</strong> A fintech unicorn's growing automation suite was accumulating flaky, low-value tests, eroding trust in CI signal across multiple product squads.</p>
+            <p><strong>Approach:</strong> Implemented daily flaky-test monitoring to identify and eliminate low-value tests, and led and coached a 12-engineer QA team through cross-team knowledge-transfer sessions.</p>
+            <p><strong>Outcome:</strong> Automation ROI increased 80%, with 20% better cross-team efficiency.</p>
+            <span class="case-metric">80% automation ROI across 12 engineers</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="band">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">07</span> Education</p>
+        <h2 class="statement">Building the technical foundation.</h2>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <h3>Software Engineering</h3>
+            <p>Universidad de la República</p>
+          </div>
+          <div class="edu-card">
+            <h3>Software Testing Leader</h3>
+            <p>Centro de Ensayos de Software</p>
+          </div>
+        </div>
+        <p class="languages"><strong>Languages:</strong> Spanish (native) · English (professional working proficiency) · Portuguese · German</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="band band-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">08</span> How quality moves</p>
+        <h2 class="statement">Quality is a process, not a phase.</h2>
+        <div class="process-row">
+          <div class="process-step"><span class="process-num">01</span><h4>Discover</h4><p>Understand the risk before writing a single test.</p></div>
+          <div class="process-step"><span class="process-num">02</span><h4>Define</h4><p>Set production-readiness criteria and definition-of-done.</p></div>
+          <div class="process-step"><span class="process-num">03</span><h4>Automate</h4><p>Build frameworks that scale with the codebase, not against it.</p></div>
+          <div class="process-step"><span class="process-num">04</span><h4>Monitor</h4><p>Track flaky tests and quality metrics as a living signal.</p></div>
+          <div class="process-step"><span class="process-num">05</span><h4>Improve</h4><p>Feed production learnings back into strategy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / closing CTA -->
+    <section id="contact" class="cta">
+      <div class="container">
+        <h2 class="cta-headline">Let's build reliable software.</h2>
+        <p class="cta-sub">Open to Staff/Lead QA and Quality Engineering opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:diegogawenda@gmail.com" class="btn btn-light">diegogawenda@gmail.com</a>
+          <a href="https://linkedin.com/in/diegogawenda" class="btn btn-outline-light" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="cta-quote">"Quality is not the last step. It's part of how you build."</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Diego Gawenda. Built with plain HTML, CSS &amp; JS.</p>
+      <p>&copy; <span id="year"></span> Diego Gawenda. Built with plain HTML, CSS &amp; JS —
+        <a href="https://github.com/diegogawenda/portfolio" target="_blank" rel="noopener">source on GitHub</a>.</p>
     </div>
   </footer>
 
