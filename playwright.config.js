@@ -2,6 +2,10 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
+  // Reference seed file for the Playwright planner/generator agents, not a
+  // real assertion-bearing test — excluded so it doesn't pollute the QA Lab
+  // panel's live test count/report.
+  testIgnore: '**/seed.spec.ts',
   fullyParallel: true,
   reporter: [
     ['html', { outputFolder: 'qa-report', open: 'never' }],
