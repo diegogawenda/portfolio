@@ -36,9 +36,28 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium webkit
 
-      - name: Run QA test suite
+      # site.spec.js gates the pending build itself (via the local
+      # webServer, before it's live). The full regression suite below
+      # targets production directly (every spec hardcodes the live URL),
+      # so it necessarily checks the site as of just before this deploy,
+      # not the pending change — in practice near-identical for most
+      # deploys, and self-corrects on the next run either way. Both steps
+      # continue on failure so a test regression never blocks shipping;
+      # the QA Lab panel just honestly reports whatever each run found.
+      - name: Run pre-deploy QA suite (site.spec.js, against the local build)
         run: npx playwright test
         continue-on-error: true
+
+      - name: Run full regression suite (against production, chromium only)
+        run: npx playwright test -c playwright.ci-full.config.js
+        continue-on-error: true
+
+      - name: Merge both runs into one report
+        run: |
+          mkdir -p all-blobs
+          cp blob-report-site/*.zip all-blobs/site.zip
+          cp blob-report-full/*.zip all-blobs/full.zip
+          npx playwright merge-reports --config=playwright.merge.config.js all-blobs
 
       - name: Generate QA summary
         run: node scripts/generate-qa-summary.js

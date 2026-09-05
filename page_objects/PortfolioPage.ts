@@ -172,7 +172,10 @@ export class PortfolioPage {
   async isInViewport(locator: Locator): Promise<boolean> {
     return locator.evaluate((el) => {
       const rect = el.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+      // Any overlap counts, matching Playwright's own toBeInViewport()
+      // default (ratio: 0) — not full containment, which is impossible for
+      // any section taller than the viewport (e.g. #qa-lab).
+      return rect.top < window.innerHeight && rect.bottom > 0;
     });
   }
 

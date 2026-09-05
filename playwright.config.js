@@ -2,14 +2,17 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  // The public QA Lab panel only reports this one suite. Everything else
-  // under tests/ (the planner/generator seed file, and the feature-area
-  // folders generated from test-artifacts/*.plan.md) targets the live
-  // production URL directly and is a separate, manually-run regression
-  // suite — it must not leak into this pre-deploy, localhost-targeted run.
+  // This is the pre-deploy gate: it runs against the local build via the
+  // webServer below, before that build goes live. Everything else under
+  // tests/ (the planner/generator seed file, and the feature-area folders
+  // generated from test-artifacts/*.plan.md) targets the live production
+  // URL directly instead, so it can only run post-deploy — see
+  // playwright.ci-full.config.js and .github/workflows/deploy.yml, which
+  // merges both runs' blob reports into the QA Lab panel's combined count.
   testMatch: 'site.spec.js',
   fullyParallel: true,
   reporter: [
+    ['blob', { outputDir: 'blob-report-site' }],
     ['html', { outputFolder: 'qa-report', open: 'never' }],
     ['json', { outputFile: 'qa-results-raw.json' }],
     ['list'],

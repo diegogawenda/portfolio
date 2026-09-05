@@ -5,6 +5,9 @@ node_modules/
 qa-report/
 qa-results.json
 qa-results-raw.json
+blob-report-site/
+blob-report-full/
+all-blobs/
 playwright-report/
 test-results/
 /*.png
