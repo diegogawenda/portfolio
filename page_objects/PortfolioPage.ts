@@ -38,6 +38,11 @@ export class PortfolioPage {
   readonly mailtoLink: Locator;
   readonly footer: Locator;
   readonly footerGithubLink: Locator;
+  readonly cardGrid: Locator;
+  readonly caseGrid: Locator;
+  readonly howGrid: Locator;
+  readonly eduGrid: Locator;
+  readonly processRow: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -74,6 +79,18 @@ export class PortfolioPage {
     this.mailtoLink = page.locator('#contact a[href^="mailto:"]');
     this.footer = page.locator('.site-footer');
     this.footerGithubLink = page.locator('.site-footer a');
+    this.cardGrid = page.locator('.card-grid');
+    this.caseGrid = page.locator('.case-grid');
+    this.howGrid = page.locator('.how-grid');
+    this.eduGrid = page.locator('.edu-grid');
+    this.processRow = page.locator('.process-row');
+  }
+
+  /** Number of columns a CSS grid locator currently renders (via computed style). */
+  async gridColumnCount(locator: Locator): Promise<number> {
+    return locator.evaluate(
+      (el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length
+    );
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
