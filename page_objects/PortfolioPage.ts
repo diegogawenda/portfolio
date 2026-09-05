@@ -29,6 +29,8 @@ export class PortfolioPage {
   readonly howCards: Locator;
   readonly timelineItems: Locator;
   readonly caseStudies: Locator;
+  readonly eduCards: Locator;
+  readonly languagesLine: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -56,6 +58,8 @@ export class PortfolioPage {
     this.howCards = page.locator('.how-grid .how-card');
     this.timelineItems = page.locator('.timeline .timeline-item');
     this.caseStudies = page.locator('.case-study');
+    this.eduCards = page.locator('.edu-grid .edu-card');
+    this.languagesLine = page.locator('.languages');
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
