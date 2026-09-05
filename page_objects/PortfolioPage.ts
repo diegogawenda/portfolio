@@ -18,6 +18,8 @@ export class PortfolioPage {
   readonly heroTagline: Locator;
   readonly heroPhoto: Locator;
   readonly heroPhotoImg: Locator;
+  readonly metricsSection: Locator;
+  readonly metricValues: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -34,6 +36,8 @@ export class PortfolioPage {
     this.heroTagline = page.locator('.hero-tagline');
     this.heroPhoto = page.locator('.hero-photo');
     this.heroPhotoImg = page.locator('.hero-photo img');
+    this.metricsSection = page.locator('.metrics');
+    this.metricValues = page.locator('.metric-value');
   }
 
   /** Locator for a nav bar link by its target section id, e.g. "expertise". */
