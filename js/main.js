@@ -65,10 +65,10 @@ async function loadQaResults() {
     passRateEl.textContent = `${data.passRate}%`;
 
     listEl.innerHTML = '';
-    data.tests.forEach((title) => {
+    data.tests.forEach((t) => {
       const li = document.createElement('li');
-      li.className = data.failed === 0 ? 'qa-pass' : 'qa-pass';
-      li.textContent = title;
+      li.className = t.passed ? 'qa-pass' : 'qa-fail';
+      li.textContent = t.title;
       listEl.appendChild(li);
     });
 

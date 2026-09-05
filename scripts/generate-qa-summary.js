@@ -26,6 +26,16 @@ function walk(suite) {
 
 for (const s of raw.suites || []) walk(s);
 
+// A title can run under multiple browser projects; it only counts as passed
+// overall if every project run for that title passed.
+const byTitle = new Map();
+for (const t of tests) {
+  byTitle.set(t.title, (byTitle.get(t.title) ?? true) && t.passed);
+}
+const testList = [...byTitle.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([title, ok]) => ({ title, passed: ok }));
+
 const summary = {
   generatedAt: new Date().toISOString(),
   totalTests: passed + failed,
@@ -33,7 +43,7 @@ const summary = {
   failed,
   browsers: [...browsers].sort(),
   passRate: passed + failed === 0 ? 0 : Math.round((passed / (passed + failed)) * 100),
-  tests: [...new Map(tests.map((t) => [t.title, t])).values()].map((t) => t.title).sort(),
+  tests: testList,
 };
 
 fs.writeFileSync(outPath, JSON.stringify(summary, null, 2));

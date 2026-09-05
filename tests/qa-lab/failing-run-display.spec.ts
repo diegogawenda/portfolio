@@ -15,7 +15,12 @@ test.describe('QA Lab (Live Self-Test Panel)', () => {
       failed: 4,
       browsers: ['chromium', 'webkit'],
       passRate: 80,
-      tests: ['passing test one', 'passing test two', 'failing test one', 'failing test two'],
+      tests: [
+        { title: 'passing test one', passed: true },
+        { title: 'passing test two', passed: true },
+        { title: 'failing test one', passed: false },
+        { title: 'failing test two', passed: false },
+      ],
     });
 
     // When the user views the QA Lab panel
@@ -26,20 +31,12 @@ test.describe('QA Lab (Live Self-Test Panel)', () => {
     await expect(portfolio.qaPassRate).toHaveText('80%');
     // And failing test entries are visually distinguished from passing ones
     //
-    // Note: the app's current main.js always renders every list item with
-    // class "qa-pass" regardless of the mocked `failed` count (see
-    // js/main.js loadQaResults — `li.className = data.failed === 0 ? 'qa-pass' : 'qa-pass'`,
-    // a bug: both branches assign the same class). Confirmed live via
-    // playwright-cli. This is a real product bug, not a stale spec — the
-    // CSS for `.qa-fail` exists and is unused. Filing as a known failure
-    // rather than silently weakening the assertion.
-    const failStyledCount = await portfolio.qaTestList.locator('li.qa-fail').count();
-    test.fixme(
-      failStyledCount === 0,
-      'main.js always classes QA Lab test list items as "qa-pass", even when data.failed > 0 — ' +
-        'failing entries are never visually distinguished. See js/main.js loadQaResults(). ' +
-        'Flagged for the user to confirm whether this is a bug to fix or intentional.'
-    );
-    expect(failStyledCount).toBeGreaterThan(0);
+    // main.js originally classed every list item "qa-pass" regardless of
+    // actual per-test outcome — a real bug, since qa-results.json only
+    // stored test titles with no per-test pass/fail data at all. Fixed by
+    // having generate-qa-summary.js emit {title, passed} pairs and main.js
+    // use that to choose "qa-pass"/"qa-fail" per item.
+    await expect(portfolio.qaTestList.locator('li.qa-fail')).toHaveCount(2);
+    await expect(portfolio.qaTestList.locator('li.qa-pass')).toHaveCount(2);
   });
 });
