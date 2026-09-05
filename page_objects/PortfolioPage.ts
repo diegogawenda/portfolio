@@ -26,6 +26,7 @@ export class PortfolioPage {
   readonly qaPassRate: Locator;
   readonly qaTestList: Locator;
   readonly qaUpdated: Locator;
+  readonly howCards: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -50,6 +51,7 @@ export class PortfolioPage {
     this.qaPassRate = page.locator('#qaPassRate');
     this.qaTestList = page.locator('#qaTestList');
     this.qaUpdated = page.locator('#qaUpdated');
+    this.howCards = page.locator('.how-grid .how-card');
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
