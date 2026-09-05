@@ -36,6 +36,8 @@ export class PortfolioPage {
   readonly ctaSub: Locator;
   readonly ctaQuote: Locator;
   readonly mailtoLink: Locator;
+  readonly footer: Locator;
+  readonly footerGithubLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -70,6 +72,8 @@ export class PortfolioPage {
     this.ctaSub = page.locator('.cta-sub');
     this.ctaQuote = page.locator('.cta-quote');
     this.mailtoLink = page.locator('#contact a[href^="mailto:"]');
+    this.footer = page.locator('.site-footer');
+    this.footerGithubLink = page.locator('.site-footer a');
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
