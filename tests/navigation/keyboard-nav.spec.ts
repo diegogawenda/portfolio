@@ -22,6 +22,6 @@ test.describe('Primary Navigation', () => {
     await page.keyboard.press('Enter');
     // Then the same scroll-to-section behavior occurs as a mouse click
     await expect(page).toHaveURL(/#about$/);
-    await expect(portfolio.section('about').locator('h2, h1').first()).toBeInViewport();
+    await expect(portfolio.sectionHeading('about')).toBeInViewport();
   });
 });

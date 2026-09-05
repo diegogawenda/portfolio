@@ -14,7 +14,7 @@ test.describe('Primary Navigation', () => {
 
     // Then the nav bar shows six links in order: About, Expertise, QA Lab, Experience, Work, Contact
     const labels = ['About', 'Expertise', 'QA Lab', 'Experience', 'Work', 'Contact'];
-    await expect(portfolio.navMenu.locator('a')).toHaveText(labels);
+    await expect(portfolio.navLinks).toHaveText(labels);
 
     // When the user clicks each nav link in order from About through Contact
     // Then after each click the URL hash matches the target section id
@@ -22,13 +22,13 @@ test.describe('Primary Navigation', () => {
     for (const id of ['about', 'expertise', 'qa-lab', 'experience', 'work', 'contact']) {
       await portfolio.navLink(id).click();
       await expect(page).toHaveURL(new RegExp(`#${id}$`));
-      await expect(portfolio.section(id).locator('h2, h1').first()).toBeInViewport();
+      await expect(portfolio.sectionHeading(id)).toBeInViewport();
     }
 
     // When the user clicks the "DG." logo
     await portfolio.logo.click();
     // Then the page scrolls back to the top of the hero (#top)
     await expect(page).toHaveURL(/#top$/);
-    await expect(page.locator('h1')).toBeInViewport();
+    await expect(portfolio.heroHeading).toBeInViewport();
   });
 });

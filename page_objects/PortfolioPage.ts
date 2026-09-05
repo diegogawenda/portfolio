@@ -12,6 +12,12 @@ export class PortfolioPage {
   readonly experienceSection: Locator;
   readonly navMenu: Locator;
   readonly navToggle: Locator;
+  readonly heroSection: Locator;
+  readonly heroEyebrow: Locator;
+  readonly heroHeading: Locator;
+  readonly heroTagline: Locator;
+  readonly heroPhoto: Locator;
+  readonly heroPhotoImg: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -22,11 +28,37 @@ export class PortfolioPage {
     this.experienceSection = page.locator('#experience');
     this.navMenu = page.locator('#nav');
     this.navToggle = page.locator('#navToggle');
+    this.heroSection = page.locator('.hero');
+    this.heroEyebrow = page.locator('.eyebrow').first();
+    this.heroHeading = page.locator('h1');
+    this.heroTagline = page.locator('.hero-tagline');
+    this.heroPhoto = page.locator('.hero-photo');
+    this.heroPhotoImg = page.locator('.hero-photo img');
   }
 
   /** Locator for a nav bar link by its target section id, e.g. "expertise". */
   navLink(id: string): Locator {
     return this.page.locator(`.nav a[href="#${id}"]`);
+  }
+
+  /** All links currently rendered inside the nav menu. */
+  get navLinks(): Locator {
+    return this.navMenu.locator('a');
+  }
+
+  /** Heading element (h1 or h2) for a top-level section, e.g. "contact". */
+  sectionHeading(id: string): Locator {
+    return this.section(id).locator('h1, h2').first();
+  }
+
+  /** A link by its accessible name, anywhere on the page. */
+  ctaLink(name: string): Locator {
+    return this.page.getByRole('link', { name });
+  }
+
+  /** A link by its accessible name, scoped to a specific section/container locator. */
+  ctaLinkWithin(container: Locator, name: string): Locator {
+    return container.getByRole('link', { name });
   }
 
   /** Navigate directly to a URL fragment, e.g. "#qa-lab". */
@@ -58,6 +90,13 @@ export class PortfolioPage {
       const rect = el.getBoundingClientRect();
       return rect.top >= 0 && rect.bottom <= window.innerHeight;
     });
+  }
+
+  /** Whether the document is wider than the viewport (a horizontal scrollbar would appear). */
+  async hasHorizontalOverflow(): Promise<boolean> {
+    return this.page.evaluate(
+      () => document.documentElement.scrollWidth > document.documentElement.clientWidth
+    );
   }
 
   /** Content of the page's <meta name="description"> tag. */

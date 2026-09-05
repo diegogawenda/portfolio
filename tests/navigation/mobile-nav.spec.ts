@@ -23,7 +23,7 @@ test.describe('Primary Navigation', () => {
     await expect(portfolio.navToggle).toHaveAttribute('aria-expanded', 'true');
     // And the nav menu becomes visible with all six links stacked vertically
     await expect(portfolio.navMenu).toBeVisible();
-    await expect(portfolio.navMenu.locator('a')).toHaveCount(6);
+    await expect(portfolio.navLinks).toHaveCount(6);
 
     // When the user clicks a nav link, for example "Work"
     await portfolio.navLink('work').click();
