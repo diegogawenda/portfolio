@@ -31,6 +31,7 @@ export class PortfolioPage {
   readonly caseStudies: Locator;
   readonly eduCards: Locator;
   readonly languagesLine: Locator;
+  readonly processSteps: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -60,6 +61,7 @@ export class PortfolioPage {
     this.caseStudies = page.locator('.case-study');
     this.eduCards = page.locator('.edu-grid .edu-card');
     this.languagesLine = page.locator('.languages');
+    this.processSteps = page.locator('.process-row .process-step');
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
