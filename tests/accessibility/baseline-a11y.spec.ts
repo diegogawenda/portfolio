@@ -26,20 +26,18 @@ test.describe('Accessibility', () => {
     // Then there are zero critical or serious violations for color contrast,
     // landmark regions, and heading order
     //
-    // Two real, confirmed violations exist on the live site today (not a
-    // stale spec — genuinely fails WCAG 2 AA):
-    //   1. color-contrast: the --accent teal (#0d9488) against white (or
-    //      vice versa) measures 3.74:1, below the 4.5:1 AA minimum, on
-    //      .btn-primary, .num badges, .process-num, and similar small/bold
-    //      teal text throughout the site.
-    //   2. scrollable-region-focusable: #qaTestList (QA Lab test list,
-    //      `overflow-y: auto`) has scrollable content but is not itself
-    //      keyboard-focusable.
-    // Allowlisting just these two known rule ids so this test still catches
-    // any *new* or *different* violation as a regression, without silently
-    // disabling accessibility coverage. Flagged for the user to decide
-    // whether to fix (darken the teal, or add tabindex="0" to the list).
-    const knownIssueRuleIds = ['color-contrast', 'scrollable-region-focusable'];
+    // scrollable-region-focusable (QA Lab test list was scrollable but not
+    // keyboard-focusable) has been fixed by adding tabindex="0".
+    //
+    // One real, confirmed violation remains on the live site (not a stale
+    // spec — genuinely fails WCAG 2 AA): color-contrast — the --accent teal
+    // (#0d9488) against white (or vice versa) measures 3.74:1, below the
+    // 4.5:1 AA minimum, on .btn-primary, .num badges, .process-num, and
+    // similar small/bold teal text throughout the site. Allowlisting just
+    // this known rule id so the test still catches any *new* or *different*
+    // violation as a regression, without silently disabling accessibility
+    // coverage. Flagged for the user to decide whether to darken the teal.
+    const knownIssueRuleIds = ['color-contrast'];
     const unexpectedViolations = results.violations.filter(
       (v) => (v.impact === 'critical' || v.impact === 'serious') && !knownIssueRuleIds.includes(v.id)
     );

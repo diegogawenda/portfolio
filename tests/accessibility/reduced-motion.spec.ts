@@ -19,20 +19,11 @@ test.describe('Accessibility', () => {
     // display final values immediately, or animate with a significantly
     // reduced duration.
     //
-    // Known gap, confirmed live (not a stale spec): js/main.js's
-    // animateMetric() always runs a fixed 1000ms requestAnimationFrame
-    // count-up with no `matchMedia('(prefers-reduced-motion: reduce)')`
-    // check anywhere in the codebase. The values still settle correctly
-    // (checked below) — only the reduced-motion preference itself is
-    // ignored. Flagged for the user to decide whether to add the check.
-    const valuesImmediatelyAfterScroll = await portfolio.metricValues.allTextContents();
-    const respectsReducedMotion = valuesImmediatelyAfterScroll.every((v) => v !== '0');
-    test.fixme(
-      !respectsReducedMotion,
-      'Metric counters ignore prefers-reduced-motion and always run the full ' +
-        '1000ms count-up animation — js/main.js has no matchMedia check. See plan note.'
-    );
-
+    // js/main.js's animateMetric() now checks
+    // matchMedia('(prefers-reduced-motion: reduce)') and, when set, writes
+    // the final value directly instead of running the 1000ms
+    // requestAnimationFrame count-up — so the values are already correct
+    // immediately after the section scrolls into view, with no wait.
     await expect(portfolio.metricValues).toHaveText(['15+', '75%', '80%', '50%', '12']);
   });
 });

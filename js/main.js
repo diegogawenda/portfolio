@@ -17,9 +17,17 @@ nav.querySelectorAll('a').forEach((link) => {
 // Animated metric counters, triggered once when scrolled into view
 const metricEls = document.querySelectorAll('.metric-value');
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 function animateMetric(el) {
   const target = Number(el.dataset.target);
   const suffix = el.dataset.suffix || '';
+
+  if (prefersReducedMotion) {
+    el.textContent = `${target}${suffix}`;
+    return;
+  }
+
   const duration = 1000;
   const start = performance.now();
 
