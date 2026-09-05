@@ -21,6 +21,11 @@ export class PortfolioPage {
   readonly metricsSection: Locator;
   readonly metricValues: Locator;
   readonly expertiseCards: Locator;
+  readonly qaTotal: Locator;
+  readonly qaBrowsers: Locator;
+  readonly qaPassRate: Locator;
+  readonly qaTestList: Locator;
+  readonly qaUpdated: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -40,6 +45,18 @@ export class PortfolioPage {
     this.metricsSection = page.locator('.metrics');
     this.metricValues = page.locator('.metric-value');
     this.expertiseCards = page.locator('#expertise .card');
+    this.qaTotal = page.locator('#qaTotal');
+    this.qaBrowsers = page.locator('#qaBrowsers');
+    this.qaPassRate = page.locator('#qaPassRate');
+    this.qaTestList = page.locator('#qaTestList');
+    this.qaUpdated = page.locator('#qaUpdated');
+  }
+
+  /** Intercept the qa-results.json fetch with a mocked response body. */
+  async mockQaResults(body: unknown, status = 200) {
+    await this.page.route('**/qa-results.json', (route) =>
+      route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) })
+    );
   }
 
   /** Locator for a nav bar link by its target section id, e.g. "expertise". */
