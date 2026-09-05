@@ -34,7 +34,7 @@ jobs:
         run: npm install
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium webkit
+        run: npx playwright install --with-deps chromium webkit firefox
 
       # site.spec.js gates the pending build itself (via the local
       # webServer, before it's live). The full regression suite below
