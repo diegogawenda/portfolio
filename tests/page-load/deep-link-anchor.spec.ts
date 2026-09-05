@@ -19,7 +19,13 @@ test.describe('Page Load & Global Health', () => {
     await page.goto('https://diegogawenda.github.io/portfolio/#qa-lab');
 
     // Then the QA Lab section (#qa-lab) is scrolled into view on initial load
-    await expect(portfolio.qaLabSection).toBeInViewport();
+    //
+    // Generous timeout: the anchor scroll animates via CSS scroll-behavior:
+    // smooth, and under heavy parallel load (many browsers hitting
+    // production at once, as happens running this full suite locally) the
+    // animation can occasionally take longer than the 5s default retry
+    // window even though it always completes correctly.
+    await expect(portfolio.qaLabSection).toBeInViewport({ timeout: 10000 });
     // And the page title and meta description are unchanged regardless of anchor
     await expect(page).toHaveTitle(baselineTitle);
     expect(await portfolio.metaDescriptionContent()).toBe(baselineDescription);
@@ -28,7 +34,7 @@ test.describe('Page Load & Global Health', () => {
     // Then the matching target section is the one visible in the viewport immediately after load
     for (const id of ['contact', 'work', 'experience']) {
       await page.goto(`https://diegogawenda.github.io/portfolio/#${id}`);
-      await expect(portfolio.section(id)).toBeInViewport();
+      await expect(portfolio.section(id)).toBeInViewport({ timeout: 10000 });
     }
   });
 });
