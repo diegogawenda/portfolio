@@ -32,6 +32,10 @@ export class PortfolioPage {
   readonly eduCards: Locator;
   readonly languagesLine: Locator;
   readonly processSteps: Locator;
+  readonly ctaHeadline: Locator;
+  readonly ctaSub: Locator;
+  readonly ctaQuote: Locator;
+  readonly mailtoLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -62,6 +66,10 @@ export class PortfolioPage {
     this.eduCards = page.locator('.edu-grid .edu-card');
     this.languagesLine = page.locator('.languages');
     this.processSteps = page.locator('.process-row .process-step');
+    this.ctaHeadline = page.locator('.cta-headline');
+    this.ctaSub = page.locator('.cta-sub');
+    this.ctaQuote = page.locator('.cta-quote');
+    this.mailtoLink = page.locator('#contact a[href^="mailto:"]');
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
