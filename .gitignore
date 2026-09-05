@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 .playwright-mcp/
+.playwright-cli/
 qa-report/
 qa-results.json
 qa-results-raw.json

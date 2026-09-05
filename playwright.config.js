@@ -2,10 +2,12 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  // Reference seed file for the Playwright planner/generator agents, not a
-  // real assertion-bearing test — excluded so it doesn't pollute the QA Lab
-  // panel's live test count/report.
-  testIgnore: '**/seed.spec.ts',
+  // The public QA Lab panel only reports this one suite. Everything else
+  // under tests/ (the planner/generator seed file, and the feature-area
+  // folders generated from test-artifacts/*.plan.md) targets the live
+  // production URL directly and is a separate, manually-run regression
+  // suite — it must not leak into this pre-deploy, localhost-targeted run.
+  testMatch: 'site.spec.js',
   fullyParallel: true,
   reporter: [
     ['html', { outputFolder: 'qa-report', open: 'never' }],
