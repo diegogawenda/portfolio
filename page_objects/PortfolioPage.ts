@@ -10,6 +10,8 @@ export class PortfolioPage {
   readonly contactSection: Locator;
   readonly workSection: Locator;
   readonly experienceSection: Locator;
+  readonly navMenu: Locator;
+  readonly navToggle: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -18,6 +20,13 @@ export class PortfolioPage {
     this.contactSection = page.locator('#contact');
     this.workSection = page.locator('#work');
     this.experienceSection = page.locator('#experience');
+    this.navMenu = page.locator('#nav');
+    this.navToggle = page.locator('#navToggle');
+  }
+
+  /** Locator for a nav bar link by its target section id, e.g. "expertise". */
+  navLink(id: string): Locator {
+    return this.page.locator(`.nav a[href="#${id}"]`);
   }
 
   /** Navigate directly to a URL fragment, e.g. "#qa-lab". */
