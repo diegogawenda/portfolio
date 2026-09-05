@@ -27,6 +27,7 @@ export class PortfolioPage {
   readonly qaTestList: Locator;
   readonly qaUpdated: Locator;
   readonly howCards: Locator;
+  readonly timelineItems: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -52,6 +53,7 @@ export class PortfolioPage {
     this.qaTestList = page.locator('#qaTestList');
     this.qaUpdated = page.locator('#qaUpdated');
     this.howCards = page.locator('.how-grid .how-card');
+    this.timelineItems = page.locator('.timeline .timeline-item');
   }
 
   /** Intercept the qa-results.json fetch with a mocked response body. */
