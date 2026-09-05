@@ -93,6 +93,26 @@ export class PortfolioPage {
     );
   }
 
+  /** Count of <img> elements with no (or empty) alt attribute. */
+  async imagesWithoutAltCount(): Promise<number> {
+    return this.page.locator('img:not([alt]), img[alt=""]').count();
+  }
+
+  /** Count of target="_blank" links missing rel="noopener". */
+  async externalLinksWithoutNoopenerCount(): Promise<number> {
+    return this.page.evaluate(
+      () =>
+        Array.from(document.querySelectorAll('a[target="_blank"]')).filter(
+          (a) => !(a.getAttribute('rel') || '').includes('noopener')
+        ).length
+    );
+  }
+
+  /** Number of heading elements at a given level (1-6). */
+  headingLevel(level: number): Locator {
+    return this.page.locator(`h${level}`);
+  }
+
   /** Intercept the qa-results.json fetch with a mocked response body. */
   async mockQaResults(body: unknown, status = 200) {
     await this.page.route('**/qa-results.json', (route) =>
