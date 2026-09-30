@@ -102,6 +102,41 @@ a { color: var(--accent-dark); }
   display: block;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-dark);
+  background: none;
+  border: 1px solid var(--accent-dark);
+  border-radius: 6px;
+  padding: 5px 9px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.lang-flag { display: block; border-radius: 2px; box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15); }
+.lang-code { display: none; }
+
+.lang-toggle:hover { background: var(--accent-dark); color: #fff; }
+
+/* Only shown in the Spanish version (e.g. "translated from English" notes) */
+.es-only { display: none; }
+html[lang="es"] .es-only { display: inline; }
+
 /* Hero */
 .hero {
   padding: 88px 24px 48px;
@@ -653,6 +688,8 @@ a { color: var(--accent-dark); }
   }
   .nav.open { display: flex; }
   .nav-toggle { display: flex; }
+  .lang-name { display: none; }
+  .lang-code { display: inline; }
   .hero-top { gap: 16px; }
   .hero-photo { width: 84px; height: 84px; border-width: 2px; }
   .hero h1 { font-size: 1.7rem; }

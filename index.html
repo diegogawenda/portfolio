@@ -23,9 +23,12 @@
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-controls">
+        <button class="lang-toggle" id="langToggle" type="button" lang="es" aria-label="Ver este sitio en español"><svg class="lang-flag" viewBox="0 0 750 500" width="20" height="14" aria-hidden="true" focusable="false"><rect width="750" height="500" fill="#AA151B"/><rect y="125" width="750" height="250" fill="#F1BF00"/></svg><span class="lang-name">Español</span><span class="lang-code">ES</span></button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -365,7 +368,7 @@
             <figcaption><strong>Ignacio Capurro</strong> Co-Founder &amp; Managing Partner, Trupropel, managed Diego directly<span class="reco-date">August 2020</span></figcaption>
           </figure>
         </div>
-        <p class="reco-source">Recommendations excerpted from <a href="https://linkedin.com/in/diegogawenda" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        <p class="reco-source">Recommendations excerpted from <a href="https://linkedin.com/in/diegogawenda" target="_blank" rel="noopener">LinkedIn</a>.<span class="es-only"> Traducidas del inglés.</span></p>
       </div>
     </section>
 
@@ -390,6 +393,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
