@@ -9,13 +9,14 @@
 // the site's intended behavior, so this test asserts that instead.
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Hero Section', () => {
   test('Hero layout holds at extreme viewport widths', async ({ page }) => {
     // Given the viewport is set to 320x568, the smallest common mobile width
     await page.setViewportSize({ width: 320, height: 568 });
     // When the homepage loads
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
     // Then no horizontal scrollbar appears
@@ -27,7 +28,7 @@ test.describe('Hero Section', () => {
 
     // Given the viewport is set to 2560x1440, a large desktop width
     await page.setViewportSize({ width: 2560, height: 1440 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
 
     // Then the hero content stays capped at its max-width
     const maxWidth = await portfolio.heroSection.evaluate((el) => getComputedStyle(el).maxWidth);

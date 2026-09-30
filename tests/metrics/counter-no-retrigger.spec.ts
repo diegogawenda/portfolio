@@ -3,11 +3,12 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Impact Metrics', () => {
   test('Counters do not re-animate on repeated scroll in and out', async ({ page }) => {
     // Given the metrics band has been scrolled into view once
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
     await portfolio.metricsSection.scrollIntoViewIfNeeded();
     // And its count-up animation has finished, settling on 15+, 75%, 80%, 50%, 12

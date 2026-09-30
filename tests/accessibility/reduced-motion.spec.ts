@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Accessibility', () => {
   test.use({ reducedMotion: 'reduce' });
@@ -11,7 +12,7 @@ test.describe('Accessibility', () => {
     // Given the browser emulates prefers-reduced-motion: reduce
     // When the page reloads and the metrics band is scrolled into view
     await page.setViewportSize({ width: 1280, height: 500 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
     await portfolio.metricsSection.scrollIntoViewIfNeeded();
 

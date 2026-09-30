@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Page Load & Global Health', () => {
   test('Initial load renders core page shell', async ({ page }) => {
@@ -21,7 +22,7 @@ test.describe('Page Load & Global Health', () => {
 
     // Given a fresh browser session
     // When the user navigates to https://diegogawenda.github.io/portfolio/
-    const response = await page.goto('https://diegogawenda.github.io/portfolio/');
+    const response = await page.goto(SITE_URL);
 
     // Then the HTTP response status is 200
     expect(response?.status()).toBe(200);

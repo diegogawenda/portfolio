@@ -3,11 +3,12 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Primary Navigation', () => {
   test('Keyboard-only navigation reaches every nav link', async ({ page }) => {
     // Given the homepage has loaded
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
     // When the user presses Tab repeatedly starting from page load

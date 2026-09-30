@@ -3,11 +3,12 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Selected Work / Case Studies', () => {
   test('Three case studies each present challenge, approach, and outcome', async ({ page }) => {
     // Given the homepage has loaded
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
     // When the user scrolls to #work
@@ -32,13 +33,13 @@ test.describe('Selected Work / Case Studies', () => {
     // Then the metrics quoted in each case study match the corresponding bullet
     // in the Experience timeline for the same company
     await portfolio.experienceSection.scrollIntoViewIfNeeded();
-    const flexBullets = await portfolio.timelineItems.nth(0).locator('ul li').allTextContents();
+    const flexBullets = await portfolio.timelineItemFor('Flex').locator('ul li').allTextContents();
     expect(flexBullets.some((b) => b.includes('75%') && b.includes('daily release'))).toBe(true);
-    const almanacBullets = await portfolio.timelineItems.nth(1).locator('ul li').allTextContents();
+    const almanacBullets = await portfolio.timelineItemFor('Almanac').locator('ul li').allTextContents();
     expect(almanacBullets.some((b) => b.includes('50%'))).toBe(true);
     // The case study's metric line synthesizes two separate dLocal bullets
     // (automation ROI and team size), so check them independently.
-    const dLocalBullets = await portfolio.timelineItems.nth(2).locator('ul li').allTextContents();
+    const dLocalBullets = await portfolio.timelineItemFor('dLocal').locator('ul li').allTextContents();
     expect(dLocalBullets.some((b) => b.includes('80%'))).toBe(true);
     expect(dLocalBullets.some((b) => b.includes('12 engineers'))).toBe(true);
   });

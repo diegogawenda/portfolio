@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('QA Lab (Live Self-Test Panel)', () => {
   test('QA Lab degrades gracefully when qa-results.json is unavailable', async ({ page }) => {
@@ -18,7 +19,7 @@ test.describe('QA Lab (Live Self-Test Panel)', () => {
     await portfolio.mockQaResults({}, 404);
 
     // When the page loads
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     await portfolio.qaLabSection.scrollIntoViewIfNeeded();
 
     // Then the stats show placeholder dashes instead of throwing a JS error or breaking the layout

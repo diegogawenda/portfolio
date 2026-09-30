@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Negative & Edge Cases', () => {
   test('JavaScript disabled', async ({ browser }) => {
@@ -12,7 +13,7 @@ test.describe('Negative & Edge Cases', () => {
     const portfolio = new PortfolioPage(page);
 
     // When the page loads
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
 
     // Then the static content — text, links, and images — still renders,
     // since the page is server-rendered HTML

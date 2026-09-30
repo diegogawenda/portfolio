@@ -9,12 +9,13 @@
 // viewport" precondition untestable.
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Impact Metrics', () => {
   test('Metric counters animate to correct target values on scroll', async ({ page }) => {
     // Given the homepage has loaded
     await page.setViewportSize({ width: 1280, height: 500 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
     // And the metrics band is outside the initial viewport

@@ -2,7 +2,7 @@
 
 ## Application Overview
 
-https://diegogawenda.github.io/portfolio/ is a static one-page portfolio site for Diego Gawenda, a Principal Quality Engineer. It presents a hero with a headshot and tagline, an animated impact-metrics band, four expertise cards, a live self-testing "QA Lab" panel that fetches real CI results from qa-results.json, a five-role experience timeline, three narrative case studies, an education section, a five-step process row, and a closing contact/CTA band. The site is plain HTML/CSS/JS deployed via GitHub Pages, with its own Playwright suite (tests/site.spec.js) already covering baseline functional checks. This plan extends coverage to full user journeys, responsive behavior, accessibility, and negative/edge-case scenarios.
+https://diegogawenda.github.io/portfolio/ is a static one-page portfolio site for Diego Gawenda, a Principal Quality Engineer. It presents a hero with a headshot and tagline, an animated impact-metrics band, four expertise cards, a live self-testing "QA Lab" panel that fetches real CI results from qa-results.json, a six-role experience timeline, three narrative case studies, an education section, a five-step process row, and a closing contact/CTA band. The site is plain HTML/CSS/JS deployed via GitHub Pages, with its own Playwright suite (tests/site.spec.js) already covering baseline functional checks. This plan extends coverage to full user journeys, responsive behavior, accessibility, and negative/edge-case scenarios.
 
 Test cases are written in Given/When/Then (BDD) form.
 
@@ -238,14 +238,14 @@ Then exactly three cards render — "Strategy", "Execution", "Scaling" — each 
 
 **Seed:** `tests/seed.spec.ts`
 
-#### 8.1. All five roles render in reverse-chronological order
+#### 8.1. All six roles render in reverse-chronological order
 **File:** `tests/experience/timeline-order.spec.ts`
 
 ```gherkin
 Given the homepage has loaded
 When the user scrolls to #experience
-Then five entries appear in this order: Flex (Feb 2024–Present), Almanac (Jul 2022–Dec 2023), dLocal (Oct 2020–Jul 2022), The Appraisal Lane (Jun 2016–Aug 2020), Greycon (Aug 2007–Jun 2016)
-And each entry shows role, company, date range, and at least two bullet achievements
+Then six entries appear in this order: OneCall (Sep 2026–Present), Flex (Feb 2024–Aug 2026), Almanac (Jul 2022–Dec 2023), dLocal (Oct 2020–Jul 2022), The Appraisal Lane (Jun 2016–Aug 2020), Greycon (Aug 2007–Jun 2016)
+And each entry shows role, company, date range, and bullet achievements (at least two, except the current role, which needs one)
 When the date ranges are checked in sequence
 Then each entry's end date is on or after the following entry's end date
 ```

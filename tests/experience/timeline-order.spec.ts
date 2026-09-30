@@ -3,20 +3,22 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Experience Timeline', () => {
-  test('All five roles render in reverse-chronological order', async ({ page }) => {
+  test('All six roles render in reverse-chronological order', async ({ page }) => {
     // Given the homepage has loaded
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
     // When the user scrolls to #experience
     await portfolio.timelineItems.first().scrollIntoViewIfNeeded();
 
-    // Then five entries appear in this order: Flex, Almanac, dLocal, The Appraisal Lane, Greycon
-    await expect(portfolio.timelineItems).toHaveCount(5);
+    // Then six entries appear in this order: OneCall, Flex, Almanac, dLocal, The Appraisal Lane, Greycon
+    await expect(portfolio.timelineItems).toHaveCount(6);
     const expected = [
-      { role: 'Staff SDET', company: 'Flex', date: 'Feb 2024 – Present' },
+      { role: 'Principal QE', company: 'OneCall', date: 'Sep 2026 – Present' },
+      { role: 'Staff SDET', company: 'Flex', date: 'Feb 2024 – Aug 2026' },
       { role: 'Senior SDET', company: 'Almanac', date: 'Jul 2022 – Dec 2023' },
       { role: 'QA Lead / Senior SDET', company: 'dLocal', date: 'Oct 2020 – Jul 2022' },
       { role: 'QA Lead', company: 'The Appraisal Lane', date: 'Jun 2016 – Aug 2020' },
@@ -28,13 +30,14 @@ test.describe('Experience Timeline', () => {
     await expect(portfolio.timelineItems.locator('.timeline-company')).toHaveText(
       expected.map((e) => e.company)
     );
-    // And each entry shows role, company, date range, and at least two bullet achievements
+    // And each entry shows role, company, date range, and bullet achievements
+    // (at least two, except the just-started current role, which needs one)
     await expect(portfolio.timelineItems.locator('.timeline-date')).toHaveText(
       expected.map((e) => e.date)
     );
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < expected.length; i++) {
       const bulletCount = await portfolio.timelineItems.nth(i).locator('ul li').count();
-      expect(bulletCount).toBeGreaterThanOrEqual(2);
+      expect(bulletCount).toBeGreaterThanOrEqual(i === 0 ? 1 : 2);
     }
 
     // When the date ranges are checked in sequence

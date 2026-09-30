@@ -3,13 +3,14 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Primary Navigation', () => {
   test('Mobile nav hamburger opens, navigates, and closes', async ({ page }) => {
     // Given the viewport is set to 390x844
     await page.setViewportSize({ width: 390, height: 844 });
     // And the homepage has loaded
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
     // Then the six text nav links are hidden

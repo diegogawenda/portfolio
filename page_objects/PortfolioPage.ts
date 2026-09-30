@@ -1,5 +1,6 @@
 // Created By AI
 import { Page, Locator } from '@playwright/test';
+import { SITE_URL } from '../tests/helpers/site';
 
 // Page Object for the single-page portfolio site. Encapsulates locators and
 // user interactions only — assertions belong in the spec files that use it.
@@ -86,6 +87,13 @@ export class PortfolioPage {
     this.processRow = page.locator('.process-row');
   }
 
+  /** The timeline entry for a given company, e.g. "Flex". */
+  timelineItemFor(company: string): Locator {
+    return this.timelineItems.filter({
+      has: this.page.locator('.timeline-company', { hasText: company }),
+    });
+  }
+
   /** Number of columns a CSS grid locator currently renders (via computed style). */
   async gridColumnCount(locator: Locator): Promise<number> {
     return locator.evaluate(
@@ -147,7 +155,7 @@ export class PortfolioPage {
 
   /** Navigate directly to a URL fragment, e.g. "#qa-lab". */
   async gotoAnchor(hash: string) {
-    await this.page.goto(`https://diegogawenda.github.io/portfolio/${hash}`);
+    await this.page.goto(`${SITE_URL}${hash}`);
   }
 
   /** Computed font-family of the page body, to confirm web fonts applied. */

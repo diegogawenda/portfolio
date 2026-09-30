@@ -7,6 +7,7 @@
 // fulfillment, per the plan's advanced-scenario guidance.
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Negative & Edge Cases', () => {
   test('Broken or slow network handling', async ({ page }) => {
@@ -20,7 +21,7 @@ test.describe('Negative & Edge Cases', () => {
     });
 
     // When the page reloads
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
 
     // Then the page text remains readable before fonts and images finish loading
     await expect(portfolio.heroHeading).toHaveText('Diego Gawenda');
@@ -33,7 +34,7 @@ test.describe('Negative & Edge Cases', () => {
     await page.route('**/assets/headshot.jpg', (route) => route.abort());
 
     // When the page reloads
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
 
     // Then the alt text "Portrait of Diego Gawenda" is shown in place of the
     // image rather than a blank broken-image icon with no fallback

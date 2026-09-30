@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Responsive & Cross-Viewport Behavior', () => {
   test('Multi-column grids reflow correctly', async ({ page }) => {
@@ -10,7 +11,7 @@ test.describe('Responsive & Cross-Viewport Behavior', () => {
 
     // Given the viewport width is 901px or more
     await page.setViewportSize({ width: 1024, height: 900 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
 
     // When the expertise, case-study, and how-I-work grids are inspected
     // Then expertise renders as a 2-column grid
@@ -26,7 +27,7 @@ test.describe('Responsive & Cross-Viewport Behavior', () => {
 
     // Given the viewport width is 900px or less
     await page.setViewportSize({ width: 768, height: 900 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
 
     // When the same grids are inspected
     // Then all of them collapse to a single column

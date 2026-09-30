@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('Responsive & Cross-Viewport Behavior', () => {
   test('No horizontal overflow at common breakpoints', async ({ page }) => {
@@ -12,7 +13,7 @@ test.describe('Responsive & Cross-Viewport Behavior', () => {
     // Then the document's scrollWidth never exceeds clientWidth at any width
     for (const width of [320, 375, 390, 768, 1024, 1440, 1920]) {
       await page.setViewportSize({ width, height: 900 });
-      await page.goto('https://diegogawenda.github.io/portfolio/');
+      await page.goto(SITE_URL);
       expect(await portfolio.hasHorizontalOverflow(), `overflow at ${width}px`).toBe(false);
     }
 
@@ -20,13 +21,13 @@ test.describe('Responsive & Cross-Viewport Behavior', () => {
     // Then the expertise, case-study, education, and process grid layouts switch cleanly
     // between column counts without visual overlap
     await page.setViewportSize({ width: 899, height: 900 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     expect(await portfolio.gridColumnCount(portfolio.cardGrid)).toBe(1);
     expect(await portfolio.gridColumnCount(portfolio.caseGrid)).toBe(1);
     expect(await portfolio.gridColumnCount(portfolio.eduGrid)).toBe(1);
 
     await page.setViewportSize({ width: 901, height: 900 });
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     expect(await portfolio.gridColumnCount(portfolio.cardGrid)).toBe(2);
     expect(await portfolio.gridColumnCount(portfolio.caseGrid)).toBe(3);
     expect(await portfolio.gridColumnCount(portfolio.eduGrid)).toBe(2);

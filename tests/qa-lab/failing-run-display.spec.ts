@@ -3,6 +3,7 @@
 // seed: tests/seed.spec.ts
 import { test, expect } from '@playwright/test';
 import { PortfolioPage } from '../../page_objects/PortfolioPage';
+import { SITE_URL } from '../helpers/site';
 
 test.describe('QA Lab (Live Self-Test Panel)', () => {
   test('QA Lab reflects a run containing failing tests', async ({ page }) => {
@@ -24,7 +25,7 @@ test.describe('QA Lab (Live Self-Test Panel)', () => {
     });
 
     // When the user views the QA Lab panel
-    await page.goto('https://diegogawenda.github.io/portfolio/');
+    await page.goto(SITE_URL);
     await portfolio.qaLabSection.scrollIntoViewIfNeeded();
 
     // Then the pass rate stat reflects the mocked percentage exactly
