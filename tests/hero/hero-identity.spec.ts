@@ -12,8 +12,8 @@ test.describe('Hero Section', () => {
     await page.goto('https://diegogawenda.github.io/portfolio/');
     const portfolio = new PortfolioPage(page);
 
-    // Then the eyebrow text reads "Staff QA Software Engineer"
-    await expect(portfolio.heroEyebrow).toHaveText('Staff QA Software Engineer');
+    // Then the eyebrow text reads "Principal Quality Engineer · AI-Augmented Testing"
+    await expect(portfolio.heroEyebrow).toHaveText('Principal Quality Engineer · AI-Augmented Testing');
     // And the h1 reads "Diego Gawenda"
     await expect(portfolio.heroHeading).toHaveText('Diego Gawenda');
     // And the tagline reads "Quality is a system, not a checklist."

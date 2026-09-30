@@ -25,8 +25,8 @@ test.describe('Page Load & Global Health', () => {
 
     // Then the HTTP response status is 200
     expect(response?.status()).toBe(200);
-    // And the page title is "Diego Gawenda — Staff QA Software Engineer"
-    await expect(page).toHaveTitle('Diego Gawenda — Staff QA Software Engineer');
+    // And the page title is "Diego Gawenda — Principal Quality Engineer · AI-Augmented Testing"
+    await expect(page).toHaveTitle('Diego Gawenda — Principal Quality Engineer · AI-Augmented Testing');
     // And no console errors are logged, excluding the browser's implicit /favicon.ico probe
     expect(consoleErrors).toEqual([]);
 

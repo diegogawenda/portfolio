@@ -29,22 +29,7 @@ test.describe('Hero Section', () => {
     expect(page.url()).toContain('diegogawenda.github.io/portfolio');
     await linkedinPopup.close();
 
-    // When the user clicks "Download CV"
-    // Then a new tab opens loading assets/Diego-Gawenda-CV.pdf
-    // And the response status is 200 with content-type application/pdf
-    //
-    // Note: Chromium's native PDF viewer popup reports an empty url()/title()
-    // even once loaded (confirmed live via playwright-cli), so this asserts
-    // on the actual network response instead of the popup page object.
-    const downloadCv = portfolio.ctaLinkWithin(portfolio.heroSection, 'Download CV');
-    const [cvPopup, cvResponse] = await Promise.all([
-      context.waitForEvent('page'),
-      context.waitForEvent('response', (res) => res.url().includes('Diego-Gawenda-CV.pdf')),
-      downloadCv.click(),
-    ]);
-    expect(cvPopup).toBeTruthy();
-    expect(cvResponse.status()).toBe(200);
-    expect(cvResponse.headers()['content-type']).toContain('application/pdf');
-    await cvPopup.close();
+    // And the hero no longer offers a "Download CV" button
+    await expect(portfolio.heroSection.getByRole('link', { name: 'Download CV' })).toHaveCount(0);
   });
 });

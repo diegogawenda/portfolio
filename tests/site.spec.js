@@ -111,4 +111,44 @@ test.describe('Portfolio site', () => {
     );
     expect(hasOverflow).toBe(false);
   });
+
+  test('recommendations section shows three attributed quotes', async ({ page }) => {
+    await page.goto('/');
+    const section = page.locator('#recommendations');
+    await expect(section.locator('.eyebrow')).toContainText('Working with Diego');
+    const cards = section.locator('.reco-card');
+    await expect(cards).toHaveCount(3);
+    for (let i = 0; i < 3; i++) {
+      await expect(cards.nth(i).locator('blockquote p').first()).not.toBeEmpty();
+      await expect(cards.nth(i).locator('.reco-theme')).not.toBeEmpty();
+      await expect(cards.nth(i).locator('figcaption strong')).not.toBeEmpty();
+      await expect(cards.nth(i).locator('.reco-date')).toHaveText(/\d{4}/);
+    }
+    await expect(cards.locator('figcaption strong')).toHaveText([
+      'Jon Hitchcock',
+      'Adam Nathan',
+      'Ignacio Capurro',
+    ]);
+  });
+
+  test('recommendations sit between the process band and the contact CTA', async ({ page }) => {
+    await page.goto('/');
+    const ids = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('main > section')).map((s) => s.id || s.className)
+    );
+    const reco = ids.indexOf('recommendations');
+    expect(reco).toBeGreaterThan(-1);
+    expect(ids[reco + 1]).toBe('contact');
+  });
+
+  test('recommendations grid collapses to one column on mobile', async ({ page }) => {
+    await page.goto('/');
+    const columns = () =>
+      page.locator('.reco-grid').evaluate(
+        (el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length
+      );
+    expect(await columns()).toBe(3);
+    await page.setViewportSize({ width: 375, height: 812 });
+    expect(await columns()).toBe(1);
+  });
 });

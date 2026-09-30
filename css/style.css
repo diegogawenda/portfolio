@@ -41,8 +41,6 @@ body {
   padding: 0 24px;
 }
 
-.container.narrow { max-width: 760px; }
-
 a { color: var(--accent-dark); }
 
 /* Header */
@@ -586,11 +584,54 @@ a { color: var(--accent-dark); }
 
 .site-footer a { color: var(--text-muted); }
 
+/* Recommendations */
+.reco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.reco-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 26px;
+}
+
+.reco-theme {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark, var(--accent));
+  margin-bottom: 14px;
+}
+
+.reco-card blockquote { margin: 0 0 20px; flex: 1; }
+.reco-card blockquote p { color: var(--text-muted); margin: 0 0 12px; font-size: 0.95rem; }
+.reco-card blockquote p:last-child { margin-bottom: 0; }
+
+.reco-card figcaption {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.reco-card figcaption strong { display: block; color: var(--text); font-size: 0.95rem; }
+.reco-date { display: block; margin-top: 4px; font-size: 0.8rem; }
+
+.reco-source { margin: 20px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero { padding-top: 48px; }
   .card-grid { grid-template-columns: 1fr; }
   .how-grid { grid-template-columns: 1fr; }
+  .reco-grid { grid-template-columns: 1fr; }
   .case-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
   .process-row { grid-template-columns: repeat(2, 1fr); }

@@ -2,7 +2,7 @@
 
 ## Application Overview
 
-https://diegogawenda.github.io/portfolio/ is a static one-page portfolio site for Diego Gawenda, a Staff QA Software Engineer. It presents a hero with a headshot and tagline, an animated impact-metrics band, four expertise cards, a live self-testing "QA Lab" panel that fetches real CI results from qa-results.json, a five-role experience timeline, three narrative case studies, an education section, a five-step process row, and a closing contact/CTA band. The site is plain HTML/CSS/JS deployed via GitHub Pages, with its own Playwright suite (tests/site.spec.js) already covering baseline functional checks. This plan extends coverage to full user journeys, responsive behavior, accessibility, and negative/edge-case scenarios.
+https://diegogawenda.github.io/portfolio/ is a static one-page portfolio site for Diego Gawenda, a Principal Quality Engineer. It presents a hero with a headshot and tagline, an animated impact-metrics band, four expertise cards, a live self-testing "QA Lab" panel that fetches real CI results from qa-results.json, a five-role experience timeline, three narrative case studies, an education section, a five-step process row, and a closing contact/CTA band. The site is plain HTML/CSS/JS deployed via GitHub Pages, with its own Playwright suite (tests/site.spec.js) already covering baseline functional checks. This plan extends coverage to full user journeys, responsive behavior, accessibility, and negative/edge-case scenarios.
 
 Test cases are written in Given/When/Then (BDD) form.
 
@@ -19,7 +19,7 @@ Test cases are written in Given/When/Then (BDD) form.
 Given a fresh browser session
 When the user navigates to https://diegogawenda.github.io/portfolio/
 Then the HTTP response status is 200
-And the page title is "Diego Gawenda — Staff QA Software Engineer"
+And the page title is "Diego Gawenda — Principal Quality Engineer · AI-Augmented Testing"
 And no console errors are logged, excluding the browser's implicit /favicon.ico probe
 When all network requests fired during load are inspected
 Then every request resolves with a status below 400
@@ -100,7 +100,7 @@ Then the same scroll-to-section behavior occurs as a mouse click
 ```gherkin
 Given the viewport is set to 1440x900
 When the homepage loads
-Then the eyebrow text reads "Staff QA Software Engineer"
+Then the eyebrow text reads "Principal Quality Engineer · AI-Augmented Testing"
 And the h1 reads "Diego Gawenda"
 And the tagline reads "Quality is a system, not a checklist."
 And the headshot image is visible, loads without error, and has non-empty alt text
@@ -119,9 +119,7 @@ When the user clicks "LinkedIn"
 Then a new tab opens to https://linkedin.com/in/diegogawenda
 And the original tab remains on the portfolio
 And the link has rel="noopener"
-When the user clicks "Download CV"
-Then a new tab opens loading assets/Diego-Gawenda-CV.pdf
-And the response status is 200 with content-type application/pdf
+Then the hero offers no "Download CV" button
 ```
 
 #### 3.3. Hero layout holds at extreme viewport widths
