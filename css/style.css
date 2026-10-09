@@ -140,8 +140,9 @@ html[lang="es"] .es-only { display: inline; }
 /* Hero */
 .hero {
   padding: 88px 24px 48px;
-  max-width: 760px;
 }
+
+.hero-tagline, .hero-summary { max-width: 720px; }
 
 .hero-top {
   display: flex;
@@ -730,7 +731,13 @@ html[lang="es"] .es-only { display: inline; }
 
 .band-dark .tailored-line { color: var(--accent-light); }
 
-.intro { padding: 64px 24px; }
+.intro {
+  padding: 72px 24px 80px;
+  background:
+    radial-gradient(ellipse 55% 70% at 85% 30%, rgba(45, 212, 191, 0.20), transparent 70%),
+    radial-gradient(circle, rgba(159, 176, 201, 0.16) 1px, transparent 1.5px) 0 0 / 28px 28px,
+    var(--bg-dark);
+}
 .intro-kicker {
   margin: 0 0 16px;
   font-size: 0.78rem;
@@ -739,11 +746,14 @@ html[lang="es"] .es-only { display: inline; }
   text-transform: uppercase;
   color: var(--accent-light);
 }
-.intro-headline { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; max-width: 800px; margin-bottom: 24px; }
+.intro-headline { font-size: clamp(1.55rem, 6.4vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 800px; margin-bottom: 24px; }
 .intro-text { color: var(--text-on-dark-muted); font-size: 1.1rem; max-width: 640px; margin: 0 0 28px; }
 .intro-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .service-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -752,6 +762,27 @@ html[lang="es"] .es-only { display: inline; }
   border-radius: 12px;
   padding: 28px;
   box-shadow: var(--card-shadow);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05), 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.service-process .process-step { border-top: 3px solid var(--accent); transition: transform 0.25s ease; }
+.service-process .process-step:hover { transform: translateY(-3px); }
+.service-process .process-num { font-size: 0.9rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card, .service-process .process-step { transition: none; }
+  .service-card:hover, .service-process .process-step:hover { transform: none; }
 }
 
 .service-tag {
