@@ -42,6 +42,7 @@ test.describe('Portfolio site', () => {
       ['QA Lab', 'qa-lab'],
       ['Experience', 'experience'],
       ['Work', 'work'],
+      ['Services', 'services'],
       ['Contact', 'contact'],
     ]) {
       await page.locator(`.nav a[href="#${id}"]`).click();
@@ -133,14 +134,25 @@ test.describe('Portfolio site', () => {
     ]);
   });
 
-  test('recommendations sit between the process band and the contact CTA', async ({ page }) => {
+  test('recommendations sit between the process band and the services section', async ({ page }) => {
     await page.goto('/');
     const ids = await page.evaluate(() =>
       Array.from(document.querySelectorAll('main > section')).map((s) => s.id || s.className)
     );
     const reco = ids.indexOf('recommendations');
     expect(reco).toBeGreaterThan(-1);
-    expect(ids[reco + 1]).toBe('contact');
+    expect(ids[reco + 1]).toBe('services');
+  });
+
+  test('services section offers two consulting options with a contact action', async ({ page }) => {
+    await page.goto('/');
+    const cards = page.locator('#services .service-card');
+    await expect(cards).toHaveCount(2);
+    await expect(cards.locator('h3')).toHaveText(['Testing Assessment', 'Testing Partnership']);
+    for (let i = 0; i < 2; i++) {
+      await expect(cards.nth(i).locator('a.btn')).toHaveAttribute('href', /^mailto:diegogawenda@gmail\.com/);
+    }
+    await expect(page.locator('.hero-actions .btn-primary')).toHaveAttribute('href', '#services');
   });
 
   test('recommendations carousel auto-advances and can be navigated', async ({ page }) => {
@@ -251,7 +263,7 @@ test.describe('Portfolio site', () => {
     test('?lang=es opens the Spanish version directly', async ({ page }) => {
       await page.goto('/?lang=es');
       await expect(page.locator('html')).toHaveAttribute('lang', 'es');
-      await expect(page.locator('.btn-primary').first()).toHaveText('Contáctame');
+      await expect(page.locator('.btn-primary').first()).toHaveText('Trabaja conmigo');
     });
 
     test('Spanish layout has no horizontal overflow on mobile', async ({ page }) => {

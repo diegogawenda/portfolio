@@ -14,6 +14,7 @@ const es = {
   'QA Lab': 'Laboratorio QA',
   'Experience': 'Experiencia',
   'Work': 'Proyectos',
+  'Services': 'Servicios',
   'Contact': 'Contacto',
   'Toggle navigation': 'Mostrar u ocultar la navegación',
   'Portrait of Diego Gawenda': 'Retrato de Diego Gawenda',
@@ -23,7 +24,7 @@ const es = {
   'Quality is a system, not a checklist.': 'La calidad es un sistema, no una lista de verificación.',
   '15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS. Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50% through shift-left practices and AI-augmented test design.':
     'Más de 15 años impulsando la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos en fintech y SaaS. Formé equipos de QA de hasta 12 personas, reduje el tiempo de regresión un 75% y el riesgo en producción un 50% con prácticas shift-left y diseño de pruebas asistido por IA.',
-  'Get in touch': 'Contáctame',
+  'Work with me': 'Trabaja conmigo',
 
   // Metrics
   'Impact metrics': 'Métricas de impacto',
@@ -222,10 +223,42 @@ const es = {
   'Senior SDET at Wisetack, reported to Diego directly': 'Senior SDET en Wisetack, reportaba directamente a Diego',
   'Recommendations excerpted from': 'Recomendaciones extraídas de',
 
+  // Services
+  'Testing consulting, in two flavors.': 'Consultoría de testing, en dos modalidades.',
+  'Whether you need a clear picture of where quality stands or an experienced partner to help you improve it, I work with your team to find the pain points and fix them.':
+    'Ya sea que necesites un diagnóstico claro del estado de la calidad o un socio con experiencia que te ayude a mejorarla, trabajo con tu equipo para encontrar los puntos de dolor y resolverlos.',
+  'Option 1': 'Opción 1',
+  'Option 2': 'Opción 2',
+  'Testing Assessment': 'Evaluación de Testing',
+  'A full evaluation of how testing works in your company today, and a clear action plan to resolve the pain points and improve quality.':
+    'Una evaluación completa de cómo funciona hoy el testing en tu empresa y un plan de acción claro para resolver los puntos de dolor y mejorar la calidad.',
+  'What you get': 'Qué obtienes',
+  'A review of your test strategy, automation, CI signal and release process':
+    'Una revisión de tu estrategia de testing, automatización, señal de CI y proceso de releases',
+  'Conversations with engineering, QA and product to find the real pain points':
+    'Conversaciones con ingeniería, QA y producto para encontrar los verdaderos puntos de dolor',
+  'A prioritized action plan with quick wins and a longer-term roadmap':
+    'Un plan de acción priorizado con mejoras rápidas y una hoja de ruta a más largo plazo',
+  'Best for:': 'Ideal para:',
+  'teams with flaky suites, slow regressions, escaped bugs or no clear testing strategy.':
+    'equipos con suites inestables, regresiones lentas, bugs que llegan a producción o sin una estrategia de testing clara.',
+  'Request an assessment': 'Solicitar una evaluación',
+  'Testing Partnership': 'Acompañamiento de Testing',
+  'Ongoing support for your testing: an action plan plus follow-up meetings to guide and back your team while the plan is implemented.':
+    'Soporte continuo para tu testing: un plan de acción y reuniones de seguimiento para guiar y respaldar a tu equipo mientras se implementa el plan.',
+  'An action plan tailored to your team and product': 'Un plan de acción a la medida de tu equipo y producto',
+  'Regular follow-up meetings to review progress and unblock the work':
+    'Reuniones de seguimiento periódicas para revisar el avance y destrabar el trabajo',
+  'Hands-on guidance on implementation, adjusting priorities as you learn':
+    'Guía práctica durante la implementación, ajustando prioridades a medida que se aprende',
+  'teams that want an experienced partner alongside them as they put better testing in place.':
+    'equipos que quieren un socio con experiencia a su lado mientras implementan un mejor testing.',
+  'Talk about a partnership': 'Hablemos de un acompañamiento',
+
   // Contact / footer
   'Let\'s fix your testing problem — for good.': 'Resolvamos tu problema de testing, de una vez por todas.',
-  'From flaky test suites to shift-left strategy, I help teams ship faster with fewer surprises.':
-    'Desde suites de tests inestables hasta estrategia shift-left, ayudo a los equipos a entregar más rápido y con menos sorpresas.',
+  'Testing assessments and hands-on support for teams that want to ship faster with fewer surprises.':
+    'Evaluaciones de testing y acompañamiento práctico para equipos que quieren entregar más rápido y con menos sorpresas.',
   '"Quality is not the last step. It\'s part of how you build."': '"La calidad no es el último paso. Es parte de cómo se construye."',
   'Diego Gawenda. Built with plain HTML, CSS & JS —': 'Diego Gawenda. Hecho con HTML, CSS y JS puro —',
   'source on GitHub': 'código fuente en GitHub',

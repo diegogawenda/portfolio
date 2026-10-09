@@ -11,11 +11,11 @@ test.describe('Hero Section', () => {
     await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
-    // When the user clicks "Get in touch"
-    await portfolio.ctaLinkWithin(portfolio.heroSection, 'Get in touch').click();
-    // Then the page scrolls to #contact
-    await expect(page).toHaveURL(/#contact$/);
-    await expect(portfolio.contactSection).toBeInViewport();
+    // When the user clicks "Work with me"
+    await portfolio.ctaLinkWithin(portfolio.heroSection, 'Work with me').click();
+    // Then the page scrolls to #services
+    await expect(page).toHaveURL(/#services$/);
+    await expect(page.locator('#services')).toBeInViewport();
 
     // When the user clicks "LinkedIn"
     const linkedin = portfolio.ctaLinkWithin(portfolio.heroSection, 'LinkedIn');

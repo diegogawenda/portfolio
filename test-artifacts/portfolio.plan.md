@@ -113,8 +113,8 @@ Then the photo renders as a circle with the face centered, not cropped at an odd
 
 ```gherkin
 Given the homepage has loaded
-When the user clicks "Get in touch"
-Then the page scrolls to #contact
+When the user clicks "Work with me"
+Then the page scrolls to #services
 When the user clicks "LinkedIn"
 Then a new tab opens to https://linkedin.com/in/diegogawenda
 And the original tab remains on the portfolio
