@@ -112,13 +112,13 @@ test.describe('Portfolio site', () => {
     expect(hasOverflow).toBe(false);
   });
 
-  test('recommendations section shows three attributed quotes', async ({ page }) => {
+  test('recommendations section shows five attributed quotes', async ({ page }) => {
     await page.goto('/');
     const section = page.locator('#recommendations');
     await expect(section.locator('.eyebrow')).toContainText('Working with Diego');
     const cards = section.locator('.reco-card');
-    await expect(cards).toHaveCount(3);
-    for (let i = 0; i < 3; i++) {
+    await expect(cards).toHaveCount(5);
+    for (let i = 0; i < 5; i++) {
       await expect(cards.nth(i).locator('blockquote p').first()).not.toBeEmpty();
       await expect(cards.nth(i).locator('.reco-theme')).not.toBeEmpty();
       await expect(cards.nth(i).locator('figcaption strong')).not.toBeEmpty();
@@ -126,8 +126,10 @@ test.describe('Portfolio site', () => {
     }
     await expect(cards.locator('figcaption strong')).toHaveText([
       'Jon Hitchcock',
+      'Julio Santos',
       'Adam Nathan',
       'Ignacio Capurro',
+      'Rodrigo Vazquez',
     ]);
   });
 
@@ -141,15 +143,18 @@ test.describe('Portfolio site', () => {
     expect(ids[reco + 1]).toBe('contact');
   });
 
-  test('recommendations grid collapses to one column on mobile', async ({ page }) => {
+  test('recommendations carousel auto-advances and can be navigated', async ({ page }) => {
     await page.goto('/');
-    const columns = () =>
-      page.locator('.reco-grid').evaluate(
-        (el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length
-      );
-    expect(await columns()).toBe(3);
-    await page.setViewportSize({ width: 375, height: 812 });
-    expect(await columns()).toBe(1);
+    const dots = page.locator('.reco-dot');
+    await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true');
+    await page.locator('#recoNext').click();
+    await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
+    await page.locator('#recoPrev').click();
+    await page.locator('#recoPrev').click();
+    await expect(dots.nth(4)).toHaveAttribute('aria-current', 'true');
+    await page.locator('#recoCarousel').hover();
+    await page.mouse.move(0, 0);
+    await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true', { timeout: 9000 });
   });
 
   test.describe('language switch', () => {
@@ -164,7 +169,7 @@ test.describe('Portfolio site', () => {
       'QA Lead / Senior SDET', 'QA Lead', 'QA Manager / Senior QA Engineer',
       'OneCall', 'Flex', 'Almanac', 'dLocal', 'The Appraisal Lane', 'Greycon',
       'Universidad de la República', 'Centro de Ensayos de Software',
-      'Oct 2020 – Jul 2022', 'Jon Hitchcock', 'Adam Nathan', 'Ignacio Capurro',
+      'Oct 2020 – Jul 2022', 'Jon Hitchcock', 'Julio Santos', 'Adam Nathan', 'Ignacio Capurro', 'Rodrigo Vazquez',
       // Only shown in Spanish, so it is "unchanged" in the English pass.
       'Traducidas del inglés.',
     ]);

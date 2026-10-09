@@ -345,13 +345,22 @@
       <div class="container">
         <p class="eyebrow eyebrow-numbered"><span class="num">09</span> Working with Diego</p>
         <h2 class="statement">Here's what the people I've worked with say.</h2>
-        <div class="reco-grid">
+        <div class="reco-carousel" id="recoCarousel" role="group" aria-roledescription="carousel" aria-label="Recommendations">
+          <div class="reco-viewport">
+          <div class="reco-track" id="recoTrack" aria-live="off">
           <figure class="reco-card">
             <span class="reco-theme">Ownership &amp; composure</span>
             <blockquote>
               <p>He didn't just execute on what was asked. He genuinely cared about the quality of the product and brought that perspective into every test, every bug report, and every team conversation.</p>
             </blockquote>
             <figcaption><strong>Jon Hitchcock</strong> Head of Quality Engineering, managed Diego directly at Flex<span class="reco-date">September 2026</span></figcaption>
+          </figure>
+          <figure class="reco-card">
+            <span class="reco-theme">Velocity &amp; quality</span>
+            <blockquote>
+              <p>I had the pleasure of working with Diego at Flex where I watched him successfully lead several workstreams' testing and releasing practices. Diego is a very skilled SDET with a strong understanding of the processes and technical frameworks that make it possible to deliver frequent iterations and high velocity without sacrificing quality.</p>
+            </blockquote>
+            <figcaption><strong>Julio Santos</strong> VP of Engineering - AI, Consumer, Quality and Infra Engineering at Flex, managed Diego directly<span class="reco-date">September 2026</span></figcaption>
           </figure>
           <figure class="reco-card">
             <span class="reco-theme">Reliability &amp; craft</span>
@@ -367,6 +376,26 @@
             </blockquote>
             <figcaption><strong>Ignacio Capurro</strong> Co-Founder &amp; Managing Partner, Trupropel, managed Diego directly<span class="reco-date">August 2020</span></figcaption>
           </figure>
+          <figure class="reco-card">
+            <span class="reco-theme">Mentorship &amp; recognition</span>
+            <blockquote>
+              <p>From the second I started working for The Appraisal Lane I felt a great confidence and guidance from Diego. He is a great Professional Leader who did a great job keeping me motivated by recognizing milestones achieved at all times. He also is a great Quality Assurance Engineer and nonetheless a great person.</p>
+            </blockquote>
+            <figcaption><strong>Rodrigo Vazquez</strong> Senior SDET at Wisetack, reported to Diego directly<span class="reco-date">August 2020</span></figcaption>
+          </figure>
+          </div>
+          </div>
+          <div class="reco-controls">
+            <button type="button" class="reco-btn" id="recoPrev" aria-label="Previous recommendation"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="reco-dots">
+              <button type="button" class="reco-dot" aria-label="Show recommendation 1"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 2"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 3"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 4"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 5"></button>
+            </div>
+            <button type="button" class="reco-btn" id="recoNext" aria-label="Next recommendation"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
         </div>
         <p class="reco-source">Recommendations excerpted from <a href="https://linkedin.com/in/diegogawenda" target="_blank" rel="noopener">LinkedIn</a>.<span class="es-only"> Traducidas del inglés.</span></p>
       </div>

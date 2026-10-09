@@ -22,7 +22,7 @@ const es = {
   'Principal Quality Engineer · AI-Augmented Testing': 'Principal Quality Engineer · Testing Aumentado con IA',
   'Quality is a system, not a checklist.': 'La calidad es un sistema, no una lista de verificación.',
   '15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS. Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50% through shift-left practices and AI-augmented test design.':
-    'Más de 15 años impulsando la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos en fintech y SaaS. Formé equipos de QA de hasta 12 ingenieros, reduje el tiempo de regresión un 75% y el riesgo en producción un 50% con prácticas shift-left y diseño de pruebas asistido por IA.',
+    'Más de 15 años impulsando la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos en fintech y SaaS. Formé equipos de QA de hasta 12 personas, reduje el tiempo de regresión un 75% y el riesgo en producción un 50% con prácticas shift-left y diseño de pruebas asistido por IA.',
   'Get in touch': 'Contáctame',
 
   // Metrics
@@ -31,13 +31,13 @@ const es = {
   'Regression time cut': 'Menos tiempo de regresión',
   'Automation ROI increase': 'Aumento del ROI de automatización',
   'Production risk reduced': 'Riesgo en producción reducido',
-  'Engineers led': 'Ingenieros liderados',
+  'Engineers led': 'Personas lideradas',
 
   // About
   'A little about me': 'Un poco sobre mí',
   'I build quality into the system, not bolted onto the end.': 'Construyo la calidad dentro del sistema, no la agrego al final.',
   'My career has moved from hands-on manual and automated testing toward test strategy, automation architecture, and team scaling — always with the same question at the center: how do we catch problems before they reach production, without slowing engineering down? That question has taken me from a 10-person distributed QA team at a UK manufacturing software company to building automation frameworks from zero at two different startups, to leading quality for a fintech unicorn\'s multiple product squads.':
-    'Mi carrera pasó del testing manual y automatizado en la práctica hacia la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos, siempre con la misma pregunta en el centro: ¿cómo detectamos los problemas antes de que lleguen a producción, sin frenar a ingeniería? Esa pregunta me llevó desde un equipo de QA distribuido de 10 personas en una empresa de software industrial del Reino Unido, a construir frameworks de automatización desde cero en dos startups, hasta liderar la calidad de varios squads de producto en un unicornio fintech.',
+    'Mi carrera pasó del testing funcional y automatizado en la práctica hacia la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos, siempre con la misma pregunta en el centro: ¿cómo detectamos los problemas antes de que lleguen a producción, sin frenar a ingeniería? Esa pregunta me llevó desde un equipo de QA distribuido de 10 personas en una empresa de software industrial del Reino Unido, a construir frameworks de automatización desde cero en dos startups, hasta liderar la calidad de varios squads de producto en un unicornio fintech.',
   'My professional journey →': 'Mi recorrido profesional →',
 
   // Expertise
@@ -116,17 +116,17 @@ const es = {
   'Increased automation ROI by 80% by eliminating low-value flaky tests through daily monitoring.':
     'Aumenté el ROI de automatización un 80% al eliminar tests inestables (flaky) de poco valor mediante monitoreo diario.',
   'Led and coached a QA team of 12 engineers across multiple product squads.':
-    'Lideré y acompañé a un equipo de QA de 12 ingenieros en varios squads de producto.',
+    'Lideré y acompañé a un equipo de QA de 12 personas en varios squads de producto.',
   'Jun 2016 – Aug 2020': 'Jun 2016 – Ago 2020',
   'Reduced production issues by 50% by rolling out QA processes for a team built from zero to 10 engineers.':
-    'Reduje los incidentes en producción un 50% al implementar procesos de QA para un equipo que hice crecer de cero a 10 ingenieros.',
+    'Reduje los incidentes en producción un 50% al implementar procesos de QA para un equipo que hice crecer de cero a 10 personas.',
   'Cut rework from 40% to 20% by defining clearer acceptance criteria and definition-of-done standards.':
     'Reduje el retrabajo del 40% al 20% al definir criterios de aceptación y estándares de definition-of-done más claros.',
   'Aug 2007 – Jun 2016': 'Ago 2007 – Jun 2016',
   'Reduced development error rate by 40% by introducing root-cause analysis into defect resolution.':
     'Reduje la tasa de errores de desarrollo un 40% al incorporar el análisis de causa raíz en la resolución de defectos.',
   'Managed a distributed QA team of 10 engineers across multiple countries.':
-    'Gestioné un equipo de QA distribuido de 10 ingenieros en varios países.',
+    'Gestioné un equipo de QA distribuido de 10 personas en varios países.',
 
   // Case studies
   'Selected work': 'Proyectos destacados',
@@ -157,10 +157,10 @@ const es = {
   'A fintech unicorn\'s growing automation suite was accumulating flaky, low-value tests, eroding trust in CI signal across multiple product squads.':
     'La suite de automatización en crecimiento de un unicornio fintech acumulaba tests inestables y de poco valor, lo que erosionaba la confianza en la señal de CI en varios squads de producto.',
   'Implemented daily flaky-test monitoring to identify and eliminate low-value tests, and led and coached a 12-engineer QA team through cross-team knowledge-transfer sessions.':
-    'Implementé un monitoreo diario de tests inestables para identificar y eliminar los de poco valor, y lideré y acompañé a un equipo de QA de 12 ingenieros con sesiones de transferencia de conocimiento entre equipos.',
+    'Implementé un monitoreo diario de tests inestables para identificar y eliminar los de poco valor, y lideré y acompañé a un equipo de QA de 12 personas con sesiones de transferencia de conocimiento entre equipos.',
   'Automation ROI increased 80%, with 20% better cross-team efficiency.':
     'El ROI de automatización aumentó un 80%, con un 20% más de eficiencia entre equipos.',
-  '80% automation ROI across 12 engineers': '80% de ROI de automatización con 12 ingenieros',
+  '80% automation ROI across 12 engineers': '80% de ROI de automatización con 12 personas',
 
   // Education
   'Education': 'Formación',
@@ -194,6 +194,10 @@ const es = {
     'No se limitó a ejecutar lo que se le pedía. Le importaba de verdad la calidad del producto y llevó esa perspectiva a cada test, cada reporte de bug y cada conversación del equipo.',
   'Head of Quality Engineering, managed Diego directly at Flex': 'Head of Quality Engineering, fue el manager directo de Diego en Flex',
   'September 2026': 'Septiembre de 2026',
+  'Velocity & quality': 'Velocidad y calidad',
+  'I had the pleasure of working with Diego at Flex where I watched him successfully lead several workstreams\' testing and releasing practices. Diego is a very skilled SDET with a strong understanding of the processes and technical frameworks that make it possible to deliver frequent iterations and high velocity without sacrificing quality.':
+    'Tuve el placer de trabajar con Diego en Flex, donde lo vi liderar con éxito las prácticas de testing y de releases de varios workstreams. Diego es un SDET muy capaz, con un sólido entendimiento de los procesos y los frameworks técnicos que permiten entregar iteraciones frecuentes y con alta velocidad sin sacrificar la calidad.',
+  'VP of Engineering - AI, Consumer, Quality and Infra Engineering at Flex, managed Diego directly': 'VP of Engineering - AI, Consumer, Quality e Infra Engineering en Flex, fue el manager directo de Diego',
   'Reliability & craft': 'Confiabilidad y oficio',
   'One of the best QA engineers I\'ve ever had the pleasure of working with… Diego is intelligent, reliable, detail oriented, and a great communicator.':
     'Uno de los mejores ingenieros de QA con los que tuve el placer de trabajar… Diego es inteligente, confiable, detallista y un gran comunicador.',
@@ -204,6 +208,18 @@ const es = {
     'Diego fue el impulsor de varias iniciativas internas que mejoraron nuestros procesos de calidad y desarrollo, como nuestra suite automatizada de tests end-to-end que acortó los tiempos de despliegue.',
   'Co-Founder & Managing Partner, Trupropel, managed Diego directly': 'Cofundador y Managing Partner de Trupropel, fue el manager directo de Diego',
   'August 2020': 'Agosto de 2020',
+  'Recommendations': 'Recomendaciones',
+  'Previous recommendation': 'Recomendación anterior',
+  'Next recommendation': 'Recomendación siguiente',
+  'Show recommendation 1': 'Ver recomendación 1',
+  'Show recommendation 2': 'Ver recomendación 2',
+  'Show recommendation 3': 'Ver recomendación 3',
+  'Show recommendation 4': 'Ver recomendación 4',
+  'Show recommendation 5': 'Ver recomendación 5',
+  'Mentorship & recognition': 'Mentoría y reconocimiento',
+  'From the second I started working for The Appraisal Lane I felt a great confidence and guidance from Diego. He is a great Professional Leader who did a great job keeping me motivated by recognizing milestones achieved at all times. He also is a great Quality Assurance Engineer and nonetheless a great person.':
+    'Desde el momento en que empecé a trabajar en The Appraisal Lane sentí una gran confianza y guía de parte de Diego. Es un gran líder profesional que hizo un excelente trabajo manteniéndome motivado al reconocer siempre los hitos alcanzados. También es un gran ingeniero de Quality Assurance y, sobre todo, una gran persona.',
+  'Senior SDET at Wisetack, reported to Diego directly': 'Senior SDET en Wisetack, reportaba directamente a Diego',
   'Recommendations excerpted from': 'Recomendaciones extraídas de',
 
   // Contact / footer

@@ -108,5 +108,53 @@ async function loadQaResults() {
 
 loadQaResults();
 
+// Recommendations carousel: auto-advances, pauses on hover/focus, manual controls
+(function () {
+  const carousel = document.getElementById('recoCarousel');
+  if (!carousel) return;
+  const track = document.getElementById('recoTrack');
+  const slides = Array.from(track.children);
+  const dots = Array.from(carousel.querySelectorAll('.reco-dot'));
+  const INTERVAL = 6500;
+  let index = 0;
+  let timer = null;
+
+  function show(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((s, n) => s.toggleAttribute('inert', n !== index));
+    dots.forEach((d, n) => d.setAttribute('aria-current', String(n === index)));
+  }
+
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  function start() {
+    stop();
+    if (prefersReducedMotion) return;
+    timer = setInterval(() => show(index + 1), INTERVAL);
+  }
+
+  function go(i) {
+    show(i);
+    start();
+  }
+
+  document.getElementById('recoPrev').addEventListener('click', () => go(index - 1));
+  document.getElementById('recoNext').addEventListener('click', () => go(index + 1));
+  dots.forEach((d, n) => d.addEventListener('click', () => go(n)));
+
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', start);
+  carousel.addEventListener('focusin', stop);
+  carousel.addEventListener('focusout', start);
+  document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+  show(0);
+  start();
+})();
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
