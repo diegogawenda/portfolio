@@ -174,7 +174,7 @@ test.describe('Portfolio site', () => {
     // job titles, numbers and symbols. Anything else left unchanged after
     // switching means a string was added without a Spanish translation.
     const SAME_IN_BOTH = new Set([
-      'DG', '.', 'Diego Gawenda', 'LinkedIn', '—', '©', 'Tests', 'diegogawenda@gmail.com',
+      'DG', 'Discovery call', '.', 'Diego Gawenda', 'LinkedIn', '—', '©', 'Tests', 'diegogawenda@gmail.com',
       'TypeScript', 'JavaScript', 'Java', 'Playwright', 'Cypress', 'Selenium', 'WebdriverIO',
       'Detox', 'Maestro', 'REST Assured', 'Postman', 'SQL', 'Cucumber', 'CI/CD',
       'GitHub Actions', 'Docker', 'Principal QE', 'Staff SDET', 'Senior SDET',

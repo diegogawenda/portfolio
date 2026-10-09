@@ -719,6 +719,15 @@ html[lang="es"] .es-only { display: inline; }
   margin-top: 32px;
 }
 
+.tailored span { display: block; }
+.tailored-line { color: var(--accent-dark); }
+.tailored-line:nth-of-type(3) { opacity: 0.55; }
+.tailored-line:nth-of-type(4) { opacity: 0.25; }
+
+.service-process { margin-top: 48px; }
+.service-process h3 { margin: 6px 0 20px; font-size: 1.4rem; }
+.process-row-4 { grid-template-columns: repeat(4, 1fr); }
+
 .service-card {
   display: flex;
   flex-direction: column;

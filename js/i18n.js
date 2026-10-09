@@ -224,9 +224,10 @@ const es = {
   'Recommendations excerpted from': 'Recomendaciones extraídas de',
 
   // Services
-  'Testing consulting, in two flavors.': 'Consultoría de testing, en dos modalidades.',
-  'Whether you need a clear picture of where quality stands or an experienced partner to help you improve it, I work with your team to find the pain points and fix them.':
-    'Ya sea que necesites un diagnóstico claro del estado de la calidad o un socio con experiencia que te ayude a mejorarla, trabajo con tu equipo para encontrar los puntos de dolor y resolverlos.',
+  'Every engagement': 'Cada servicio',
+  'built around you.': 'a tu medida.',
+  'No off-the-shelf testing programs. I design each engagement from scratch, starting from your team\'s real challenges. The diagnosis comes first. The proposal comes after.':
+    'No tengo programas enlatados. Diseño cada servicio desde cero, partiendo de los desafíos reales de tu equipo. El diagnóstico va primero. La propuesta viene después.',
   'Option 1': 'Opción 1',
   'Option 2': 'Opción 2',
   'Testing Assessment': 'Evaluación de Testing',
@@ -253,6 +254,20 @@ const es = {
     'Guía práctica durante la implementación, ajustando prioridades a medida que se aprende',
   'teams that want an experienced partner alongside them as they put better testing in place.':
     'equipos que quieren un socio con experiencia a su lado mientras implementan un mejor testing.',
+  'How a partnership works': 'Cómo funciona un acompañamiento',
+  'From first call to results.': 'De la primera llamada a los resultados.',
+  'Discovery call': 'Discovery call',
+  '30 minutes to understand your testing challenge and see if we\'re the right match.':
+    '30 minutos para entender tu desafío de testing y ver si somos el match correcto.',
+  'Diagnosis': 'Diagnóstico',
+  'Before proposing anything, I listen and look: interviews, a review of your tests and pipeline, or a full assessment, depending on the case.':
+    'Antes de proponer algo, escucho y observo: entrevistas, una revisión de tus tests y tu pipeline, o un assessment completo, según el caso.',
+  'Tailored action plan': 'Plan de acción a medida',
+  'A specific plan with goals, priorities, tooling and the metrics that will show progress.':
+    'Un plan específico con objetivos, prioridades, herramientas y las métricas que mostrarán el avance.',
+  'Implementation': 'Implementación',
+  'Your team executes with my guidance, and follow-up meetings track the real impact.':
+    'Tu equipo ejecuta con mi guía, y las reuniones de seguimiento miden el impacto real.',
   'Talk about a partnership': 'Hablemos de un acompañamiento',
 
   // Contact / footer
