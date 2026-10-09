@@ -728,6 +728,21 @@ html[lang="es"] .es-only { display: inline; }
 .service-process h3 { margin: 6px 0 20px; font-size: 1.4rem; }
 .process-row-4 { grid-template-columns: repeat(4, 1fr); }
 
+.band-dark .tailored-line { color: var(--accent-light); }
+
+.intro { padding: 64px 24px; }
+.intro-kicker {
+  margin: 0 0 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+.intro-headline { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; max-width: 800px; margin-bottom: 24px; }
+.intro-text { color: var(--text-on-dark-muted); font-size: 1.1rem; max-width: 640px; margin: 0 0 28px; }
+.intro-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
 .service-card {
   display: flex;
   flex-direction: column;

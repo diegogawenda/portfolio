@@ -26,6 +26,15 @@ const es = {
     'Más de 15 años impulsando la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos en fintech y SaaS. Formé equipos de QA de hasta 12 personas, reduje el tiempo de regresión un 75% y el riesgo en producción un 50% con prácticas shift-left y diseño de pruebas asistido por IA.',
   'Work with me': 'Trabaja conmigo',
 
+  // Intro banner
+  'Work with Diego': 'Trabajar con Diego',
+  'Testing consulting · Quality engineering': 'Consultoría de testing · Ingeniería de calidad',
+  'Great quality starts': 'La buena calidad empieza',
+  'with a conversation.': 'con una conversación.',
+  'Let\'s talk testing, where it\'s heading, and how we could work together. Whether you\'re fighting flaky pipelines and slow releases or just curious about AI-augmented testing, I\'d be glad to chat.':
+    'Hablemos de testing, hacia dónde va y cómo podríamos trabajar juntos. Ya sea que estés lidiando con pipelines inestables y releases lentos, o simplemente tengas curiosidad por el testing aumentado con IA, con gusto charlamos.',
+  'Let\'s schedule a call': 'Agendemos una call',
+
   // Metrics
   'Impact metrics': 'Métricas de impacto',
   'Years in QA': 'Años en QA',
@@ -227,7 +236,7 @@ const es = {
   'Every engagement': 'Cada servicio',
   'built around you.': 'a tu medida.',
   'No off-the-shelf testing programs. I design each engagement from scratch, starting from your team\'s real challenges. The diagnosis comes first. The proposal comes after.':
-    'No tengo programas enlatados. Diseño cada servicio desde cero, partiendo de los desafíos reales de tu equipo. El diagnóstico va primero. La propuesta viene después.',
+    'No tengo programas genéricos. Diseño cada servicio desde cero, partiendo de los desafíos reales de tu equipo. El diagnóstico va primero. La propuesta viene después.',
   'Option 1': 'Opción 1',
   'Option 2': 'Opción 2',
   'Testing Assessment': 'Evaluación de Testing',

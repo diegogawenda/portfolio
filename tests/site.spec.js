@@ -155,6 +155,14 @@ test.describe('Portfolio site', () => {
     await expect(page.locator('.hero-actions .btn-primary')).toHaveAttribute('href', '#services');
   });
 
+  test('intro banner invites visitors to schedule a call', async ({ page }) => {
+    await page.goto('/');
+    const intro = page.locator('.intro');
+    await expect(intro.locator('.tailored-lead')).toHaveText('Great quality starts');
+    await expect(intro.locator('a.btn-light')).toHaveAttribute('href', /^mailto:diegogawenda@gmail\.com/);
+    await expect(intro.locator('.btn')).toHaveCount(1);
+  });
+
   test('recommendations carousel auto-advances and can be navigated', async ({ page }) => {
     await page.goto('/');
     const dots = page.locator('.reco-dot');
@@ -263,7 +271,7 @@ test.describe('Portfolio site', () => {
     test('?lang=es opens the Spanish version directly', async ({ page }) => {
       await page.goto('/?lang=es');
       await expect(page.locator('html')).toHaveAttribute('lang', 'es');
-      await expect(page.locator('.btn-primary').first()).toHaveText('Trabaja conmigo');
+      await expect(page.locator('.hero .btn-primary')).toHaveText('Trabaja conmigo');
     });
 
     test('Spanish layout has no horizontal overflow on mobile', async ({ page }) => {
