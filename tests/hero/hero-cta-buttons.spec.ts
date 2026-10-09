@@ -11,11 +11,12 @@ test.describe('Hero Section', () => {
     await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
-    // When the user clicks "Work with me"
-    await portfolio.ctaLinkWithin(portfolio.heroSection, 'Work with me').click();
-    // Then the page scrolls to #services
-    await expect(page).toHaveURL(/#services$/);
-    await expect(page.locator('#services')).toBeInViewport();
+    // Then the primary "Book a 30-minute call" button opens an email to Diego
+    // (until a booking link is set in BOOKING_URL in js/main.js)
+    await expect(portfolio.ctaLinkWithin(portfolio.heroSection, 'Book a 30-minute call')).toHaveAttribute(
+      'href',
+      /^mailto:diegogawenda@gmail\.com/
+    );
 
     // When the user clicks "LinkedIn"
     const linkedin = portfolio.ctaLinkWithin(portfolio.heroSection, 'LinkedIn');

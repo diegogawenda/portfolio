@@ -100,8 +100,9 @@ test.describe('Portfolio site', () => {
 
   test('contact section exposes a working mailto link', async ({ page }) => {
     await page.goto('/');
-    const mail = page.locator('#contact a[href^="mailto:"]');
+    const mail = page.locator('#contact a.btn-outline-light[href^="mailto:"]');
     await expect(mail).toHaveAttribute('href', 'mailto:diegogawenda@gmail.com');
+    await expect(page.locator('#contact a[data-book]')).toHaveText('Book a 30-minute call');
   });
 
   test('page is responsive at mobile width with no horizontal overflow', async ({ page }) => {
@@ -134,14 +135,38 @@ test.describe('Portfolio site', () => {
     ]);
   });
 
-  test('recommendations sit between the process band and the services section', async ({ page }) => {
+  test('sections follow the buyer journey: offer, proof, then background', async ({ page }) => {
     await page.goto('/');
     const ids = await page.evaluate(() =>
-      Array.from(document.querySelectorAll('main > section')).map((s) => s.id || s.className)
+      Array.from(document.querySelectorAll('main > section')).map((s) => s.id || s.className.split(' ')[0])
     );
-    const reco = ids.indexOf('recommendations');
-    expect(reco).toBeGreaterThan(-1);
-    expect(ids[reco + 1]).toBe('services');
+    const at = (id) => ids.indexOf(id);
+    expect(at('hero')).toBe(0);
+    expect(at('signals')).toBeLessThan(at('services'));
+    expect(at('services')).toBeLessThan(at('work'));
+    expect(at('work')).toBeLessThan(at('recommendations'));
+    expect(at('recommendations')).toBeLessThan(at('about'));
+    expect(at('faq')).toBe(ids.length - 2);
+    expect(ids[ids.length - 1]).toBe('contact');
+  });
+
+  test('FAQ answers open and close', async ({ page }) => {
+    await page.goto('/');
+    const first = page.locator('#faq details').first();
+    await expect(page.locator('#faq details')).toHaveCount(5);
+    await expect(first).not.toHaveAttribute('open', '');
+    await first.locator('summary').click();
+    await expect(first).toHaveAttribute('open', '');
+    await expect(first.locator('p')).toBeVisible();
+  });
+
+  test('"Book a call" buttons are available in the header, hero and contact', async ({ page }) => {
+    await page.goto('/');
+    const book = page.locator('a[data-book]');
+    expect(await book.count()).toBeGreaterThanOrEqual(4);
+    for (const href of await book.evaluateAll((els) => els.map((e) => e.getAttribute('href')))) {
+      expect(href).toMatch(/^mailto:diegogawenda@gmail\.com/);
+    }
   });
 
   test('services section offers two consulting options with a contact action', async ({ page }) => {
@@ -152,15 +177,13 @@ test.describe('Portfolio site', () => {
     for (let i = 0; i < 2; i++) {
       await expect(cards.nth(i).locator('a.btn')).toHaveAttribute('href', /^mailto:diegogawenda@gmail\.com/);
     }
-    await expect(page.locator('.hero-actions .btn-primary')).toHaveAttribute('href', '#services');
   });
 
   test('intro banner invites visitors to schedule a call', async ({ page }) => {
     await page.goto('/');
-    const intro = page.locator('.intro');
+    const intro = page.locator('.hero');
     await expect(intro.locator('.tailored-lead')).toHaveText('Great quality starts');
     await expect(intro.locator('a.btn-light')).toHaveAttribute('href', /^mailto:diegogawenda@gmail\.com/);
-    await expect(intro.locator('.btn')).toHaveCount(1);
   });
 
   test('recommendations carousel auto-advances and can be navigated', async ({ page }) => {
@@ -271,7 +294,7 @@ test.describe('Portfolio site', () => {
     test('?lang=es opens the Spanish version directly', async ({ page }) => {
       await page.goto('/?lang=es');
       await expect(page.locator('html')).toHaveAttribute('lang', 'es');
-      await expect(page.locator('.hero .btn-primary')).toHaveText('Trabaja conmigo');
+      await expect(page.locator('.hero a[data-book]')).toHaveText('Agenda una call de 30 minutos');
     });
 
     test('Spanish layout has no horizontal overflow on mobile', async ({ page }) => {

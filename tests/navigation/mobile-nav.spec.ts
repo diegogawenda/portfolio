@@ -22,9 +22,9 @@ test.describe('Primary Navigation', () => {
     await portfolio.navToggle.click();
     // Then aria-expanded on the button becomes "true"
     await expect(portfolio.navToggle).toHaveAttribute('aria-expanded', 'true');
-    // And the nav menu becomes visible with all six links stacked vertically
+    // And the nav menu becomes visible with all seven links stacked vertically
     await expect(portfolio.navMenu).toBeVisible();
-    await expect(portfolio.navLinks).toHaveCount(6);
+    await expect(portfolio.navLinks).toHaveCount(7);
 
     // When the user clicks a nav link, for example "Work"
     await portfolio.navLink('work').click();

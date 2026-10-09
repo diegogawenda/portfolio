@@ -24,16 +24,30 @@ const es = {
   'Quality is a system, not a checklist.': 'La calidad es un sistema, no una lista de verificación.',
   '15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS. Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50% through shift-left practices and AI-augmented test design.':
     'Más de 15 años impulsando la estrategia de testing, la arquitectura de automatización y el crecimiento de equipos en fintech y SaaS. Formé equipos de QA de hasta 12 personas, reduje el tiempo de regresión un 75% y el riesgo en producción un 50% con prácticas shift-left y diseño de pruebas asistido por IA.',
-  'Work with me': 'Trabaja conmigo',
+  'Book a 30-minute call': 'Agenda una call de 30 minutos',
+  'Book a call': 'Agenda una call',
 
-  // Intro banner
   'Work with Diego': 'Trabajar con Diego',
   'Testing consulting · Quality engineering': 'Consultoría de testing · Ingeniería de calidad',
   'Great quality starts': 'La buena calidad empieza',
   'with a conversation.': 'con una conversación.',
   'Let\'s talk testing, where it\'s heading, and how we could work together. Whether you\'re fighting flaky pipelines and slow releases or just curious about AI-augmented testing, I\'d be glad to chat.':
     'Hablemos de testing, hacia dónde va y cómo podríamos trabajar juntos. Ya sea que estés lidiando con pipelines inestables y releases lentos, o simplemente tengas curiosidad por el testing aumentado con IA, con gusto charlamos.',
-  'Let\'s schedule a call': 'Agendemos una call',
+
+  // When to call
+  'When to call': 'Cuándo llamar',
+  'Does any of this sound familiar?': '¿Te suena alguna de estas situaciones?',
+  'Releases feel risky.': 'Los releases dan miedo.',
+  'Every deploy ends with a long manual regression pass and crossed fingers.': 'Cada deploy termina con una larga regresión manual y los dedos cruzados.',
+  'Nobody trusts a red build.': 'Nadie confía en un build rojo.',
+  'Flaky tests turn the suite into noise instead of a signal.': 'Los tests inestables convierten la suite en ruido en lugar de una señal.',
+  'Bugs keep reaching production.': 'Los bugs siguen llegando a producción.',
+  'Fixing them eats the time you planned for the roadmap.': 'Corregirlos se come el tiempo que tenías planeado para el roadmap.',
+  'There is no clear testing strategy.': 'No hay una estrategia de testing clara.',
+  'What gets tested depends on who happens to be on the team.': 'Lo que se prueba depende de quién esté en el equipo.',
+  'Automation grew, but its value is unclear.': 'La automatización creció, pero su valor no está claro.',
+  'More tests, more maintenance, and no way to tell what they are worth.': 'Más tests, más mantenimiento y ninguna forma de saber cuánto valen.',
+  'If two or more sound familiar, let\'s talk.': 'Si dos o más te suenan, hablemos.',
 
   // Metrics
   'Impact metrics': 'Métricas de impacto',
@@ -140,7 +154,7 @@ const es = {
 
   // Case studies
   'Selected work': 'Proyectos destacados',
-  'Three problems, three systems built to solve them.': 'Tres problemas, tres sistemas construidos para resolverlos.',
+  'Real problems, measurable results.': 'Problemas reales, resultados medibles.',
   'Case study — Flex': 'Caso de estudio — Flex',
   'From monthly to weekly releases at fintech speed': 'De releases mensuales a semanales a velocidad fintech',
   'Challenge:': 'Desafío:',
@@ -277,7 +291,28 @@ const es = {
   'Implementation': 'Implementación',
   'Your team executes with my guidance, and follow-up meetings track the real impact.':
     'Tu equipo ejecuta con mi guía, y las reuniones de seguimiento miden el impacto real.',
+  'Remote-first': 'Trabajo remoto',
+  'English and Spanish': 'Inglés y español',
+  'Scope and timing agreed after the discovery call': 'Alcance y tiempos definidos después de la discovery call',
   'Talk about a partnership': 'Hablemos de un acompañamiento',
+
+  // FAQ
+  'FAQ': 'Preguntas frecuentes',
+  'Questions before we talk.': 'Preguntas antes de hablar.',
+  'Who is this for?': '¿Para quién es esto?',
+  'Engineering teams that ship software and want testing to catch more problems with less friction. If you have no QA yet, an assessment is a good starting point. If you already have a team, I work alongside it.':
+    'Equipos de ingeniería que entregan software y quieren que el testing detecte más problemas con menos fricción. Si todavía no tienes QA, una evaluación es un buen punto de partida. Si ya tienes un equipo, trabajo a su lado.',
+  'Do I have to choose between the two plans?': '¿Tengo que elegir entre los dos planes?',
+  'No. Many teams start with an assessment and decide afterwards whether they want support while the plan is implemented. A partnership can also start directly if you already know your pain points.':
+    'No. Muchos equipos empiezan con una evaluación y después deciden si quieren acompañamiento durante la implementación del plan. El acompañamiento también puede empezar directamente si ya conoces tus puntos de dolor.',
+  'How do we start?': '¿Cómo empezamos?',
+  'With a 30-minute discovery call to understand your challenge and see if we are a good match. Nothing else is decided on that call.':
+    'Con una discovery call de 30 minutos para entender tu desafío y ver si somos un buen match. En esa llamada no se decide nada más.',
+  'Will this replace my QA team?': '¿Esto reemplaza a mi equipo de QA?',
+  'No. The goal is to strengthen it. I assess, plan and coach, and your team keeps ownership of the work.':
+    'No. El objetivo es fortalecerlo. Yo evalúo, planifico y acompaño, y tu equipo mantiene la responsabilidad del trabajo.',
+  'Can we sign an NDA first?': '¿Podemos firmar un NDA primero?',
+  'Yes. I am happy to sign one before looking at anything internal.': 'Sí. Con gusto firmo uno antes de ver cualquier cosa interna.',
 
   // Contact / footer
   'Let\'s fix your testing problem — for good.': 'Resolvamos tu problema de testing, de una vez por todas.',

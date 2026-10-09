@@ -13,14 +13,14 @@ test.describe('Primary Navigation', () => {
     await page.goto(SITE_URL);
     const portfolio = new PortfolioPage(page);
 
-    // Then the nav bar shows six links in order: About, Expertise, QA Lab, Experience, Work, Contact
-    const labels = ['About', 'Expertise', 'QA Lab', 'Experience', 'Work', 'Contact'];
+    // Then the nav bar shows seven links in order: Services, Work, About, Expertise, QA Lab, Experience, Contact
+    const labels = ['Services', 'Work', 'About', 'Expertise', 'QA Lab', 'Experience', 'Contact'];
     await expect(portfolio.navLinks).toHaveText(labels);
 
-    // When the user clicks each nav link in order from About through Contact
+    // When the user clicks each nav link in order from Services through Contact
     // Then after each click the URL hash matches the target section id
     // And that section's heading is within the viewport
-    for (const id of ['about', 'expertise', 'qa-lab', 'experience', 'work', 'contact']) {
+    for (const id of ['services', 'work', 'about', 'expertise', 'qa-lab', 'experience', 'contact']) {
       await portfolio.navLink(id).click();
       await expect(page).toHaveURL(new RegExp(`#${id}$`));
       await expect(portfolio.sectionHeading(id)).toBeInViewport();

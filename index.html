@@ -16,15 +16,16 @@
     <div class="container header-inner">
       <a href="#top" class="logo">DG<span class="dot">.</span></a>
       <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
         <a href="#qa-lab">QA Lab</a>
         <a href="#experience">Experience</a>
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-controls">
+        <a href="mailto:diegogawenda@gmail.com?subject=Discovery%20call" class="btn btn-primary header-cta" data-book>Book a call</a>
         <button class="lang-toggle" id="langToggle" type="button" lang="es" aria-label="Ver este sitio en español"><svg class="lang-flag" viewBox="0 0 750 500" width="20" height="14" aria-hidden="true" focusable="false"><rect width="750" height="500" fill="#AA151B"/><rect y="125" width="750" height="250" fill="#F1BF00"/></svg><span class="lang-name">Español</span><span class="lang-code">ES</span></button>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -35,43 +36,40 @@
 
   <main id="top">
 
-    <!-- Intro banner -->
-    <section class="intro band band-dark" aria-label="Work with Diego">
-      <div class="container">
-        <p class="intro-kicker">Testing consulting · Quality engineering</p>
-        <p class="statement tailored intro-headline">
-          <span class="tailored-lead">Great quality starts</span>
-          <span class="tailored-line">with a conversation.</span>
-          <span class="tailored-line" aria-hidden="true">with a conversation.</span>
-          <span class="tailored-line" aria-hidden="true">with a conversation.</span>
-        </p>
-        <p class="intro-text">Let's talk testing, where it's heading, and how we could work together. Whether you're fighting flaky pipelines and slow releases or just curious about AI-augmented testing, I'd be glad to chat.</p>
-        <div class="intro-actions">
-          <a href="mailto:diegogawenda@gmail.com?subject=Let%27s%20talk%20testing" class="btn btn-light">Let's schedule a call</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Hero -->
-    <section class="hero container">
-      <div class="hero-top">
-        <div class="hero-photo">
-          <img src="assets/headshot.jpg" alt="Portrait of Diego Gawenda" width="200" height="200" />
+    <section class="hero band band-dark" aria-label="Work with Diego">
+      <div class="container hero-grid">
+        <div class="hero-offer">
+          <p class="intro-kicker">Testing consulting · Quality engineering</p>
+          <p class="statement tailored intro-headline">
+            <span class="tailored-lead">Great quality starts</span>
+            <span class="tailored-line">with a conversation.</span>
+            <span class="tailored-line" aria-hidden="true">with a conversation.</span>
+            <span class="tailored-line" aria-hidden="true">with a conversation.</span>
+          </p>
+          <p class="intro-text">Let's talk testing, where it's heading, and how we could work together. Whether you're fighting flaky pipelines and slow releases or just curious about AI-augmented testing, I'd be glad to chat.</p>
+          <div class="intro-actions">
+            <a href="mailto:diegogawenda@gmail.com?subject=Discovery%20call" class="btn btn-light" data-book>Book a 30-minute call</a>
+            <a href="https://linkedin.com/in/diegogawenda" class="btn btn-outline-light" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
         </div>
-        <div class="hero-heading">
-          <p class="eyebrow">Principal Quality Engineer · AI-Augmented Testing</p>
-          <h1>Diego Gawenda</h1>
+        <div class="hero-card">
+          <div class="hero-top">
+            <div class="hero-photo">
+              <img src="assets/headshot.jpg" alt="Portrait of Diego Gawenda" width="200" height="200" />
+            </div>
+            <div class="hero-heading">
+              <p class="eyebrow">Principal Quality Engineer · AI-Augmented Testing</p>
+              <h1>Diego Gawenda</h1>
+            </div>
+          </div>
+          <p class="hero-tagline">Quality is a system, not a checklist.</p>
+          <p class="hero-summary">
+            15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS.
+            Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50%
+            through shift-left practices and AI-augmented test design.
+          </p>
         </div>
-      </div>
-      <p class="hero-tagline">Quality is a system, not a checklist.</p>
-      <p class="hero-summary">
-        15+ years driving test strategy, automation architecture, and team scaling across fintech and SaaS.
-        Built QA teams of up to 12 engineers, cut regression time by 75%, and reduced production risk by 50%
-        through shift-left practices and AI-augmented test design.
-      </p>
-      <div class="hero-actions">
-        <a href="#services" class="btn btn-primary">Work with me</a>
-        <a href="https://linkedin.com/in/diegogawenda" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
@@ -98,10 +96,178 @@
       </div>
     </section>
 
+    <!-- Signals -->
+    <section id="signals" class="band">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">01</span> When to call</p>
+        <h2 class="statement">Does any of this sound familiar?</h2>
+        <ul class="signal-list">
+          <li><strong>Releases feel risky.</strong><span>Every deploy ends with a long manual regression pass and crossed fingers.</span></li>
+          <li><strong>Nobody trusts a red build.</strong><span>Flaky tests turn the suite into noise instead of a signal.</span></li>
+          <li><strong>Bugs keep reaching production.</strong><span>Fixing them eats the time you planned for the roadmap.</span></li>
+          <li><strong>There is no clear testing strategy.</strong><span>What gets tested depends on who happens to be on the team.</span></li>
+          <li><strong>Automation grew, but its value is unclear.</strong><span>More tests, more maintenance, and no way to tell what they are worth.</span></li>
+        </ul>
+        <p class="signal-close">If two or more sound familiar, let's talk. <a class="text-link" href="mailto:diegogawenda@gmail.com?subject=Discovery%20call" data-book>Book a 30-minute call</a></p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="band band-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">02</span> Services</p>
+        <h2 class="statement tailored">
+          <span class="tailored-lead">Every engagement</span>
+          <span class="tailored-line">built around you.</span>
+          <span class="tailored-line" aria-hidden="true">built around you.</span>
+          <span class="tailored-line" aria-hidden="true">built around you.</span>
+        </h2>
+        <p class="lede">No off-the-shelf testing programs. I design each engagement from scratch, starting from your team's real challenges. The diagnosis comes first. The proposal comes after.</p>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-tag">Diagnose &amp; plan</span>
+            <h3>Testing Assessment</h3>
+            <p>A full evaluation of how testing works in your company today, and a clear action plan to resolve the pain points and improve quality.</p>
+            <h4>What you get</h4>
+            <ul class="service-list">
+              <li>A review of your test strategy, automation, CI signal and release process</li>
+              <li>Conversations with engineering, QA and product to find the real pain points</li>
+              <li>A prioritized action plan with quick wins and a longer-term roadmap</li>
+            </ul>
+            <p class="service-fit"><strong>Best for:</strong> teams with flaky suites, slow regressions, escaped bugs or no clear testing strategy.</p>
+            <a class="btn btn-primary" href="mailto:diegogawenda@gmail.com?subject=Testing%20Assessment">Request an assessment</a>
+          </article>
+          <article class="service-card">
+            <span class="service-tag">Plan &amp; support</span>
+            <h3>Testing Partnership</h3>
+            <p>Ongoing support for your testing: an action plan plus follow-up meetings to guide and back your team while the plan is implemented.</p>
+            <h4>What you get</h4>
+            <ul class="service-list">
+              <li>An action plan tailored to your team and product</li>
+              <li>Regular follow-up meetings to review progress and unblock the work</li>
+              <li>Hands-on guidance on implementation, adjusting priorities as you learn</li>
+            </ul>
+            <p class="service-fit"><strong>Best for:</strong> teams that want an experienced partner alongside them as they put better testing in place.</p>
+            <a class="btn btn-primary" href="mailto:diegogawenda@gmail.com?subject=Testing%20Partnership">Talk about a partnership</a>
+          </article>
+        </div>
+        <ul class="service-facts">
+          <li>Remote-first</li>
+          <li>English and Spanish</li>
+          <li>Scope and timing agreed after the discovery call</li>
+        </ul>
+        <div class="service-process">
+          <p class="service-tag">How a partnership works</p>
+          <h3>From first call to results.</h3>
+          <div class="partner-steps">
+            <div class="partner-step"><span class="partner-num">01</span><h4>Discovery call</h4><p>30 minutes to understand your testing challenge and see if we're the right match.</p></div>
+            <div class="partner-step"><span class="partner-num">02</span><h4>Diagnosis</h4><p>Before proposing anything, I listen and look: interviews, a review of your tests and pipeline, or a full assessment, depending on the case.</p></div>
+            <div class="partner-step"><span class="partner-num">03</span><h4>Tailored action plan</h4><p>A specific plan with goals, priorities, tooling and the metrics that will show progress.</p></div>
+            <div class="partner-step"><span class="partner-num">04</span><h4>Implementation</h4><p>Your team executes with my guidance, and follow-up meetings track the real impact.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected work / case studies -->
+    <section id="work" class="band band-dark">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">03</span> Selected work</p>
+        <h2 class="statement">Real problems, measurable results.</h2>
+        <div class="case-grid">
+          <article class="case-study">
+            <span class="case-tag">Case study — Flex</span>
+            <h3>From monthly to weekly releases at fintech speed</h3>
+            <p><strong>Challenge:</strong> A rent-payment fintech shipping weekly, with mobile regression eating days before every release.</p>
+            <p><strong>Approach:</strong> Designed and integrated a mobile automation suite directly into GitHub Actions, rebuilt the QA workload estimation process, and introduced shift-left checks earlier in development.</p>
+            <p><strong>Outcome:</strong> Regression time cut 75%, unlocking daily release cycles instead of weekly, with 80% more predictable delivery forecasts.</p>
+            <span class="case-metric">75% faster regression → daily releases</span>
+          </article>
+          <article class="case-study">
+            <span class="case-tag">Case study — Almanac</span>
+            <h3>Automation built from zero</h3>
+            <p><strong>Challenge:</strong> An async collaboration platform relying entirely on manual regression testing, slowing every release.</p>
+            <p><strong>Approach:</strong> Built an end-to-end Playwright/TypeScript automation framework from scratch and embedded automated checks earlier in the development pipeline.</p>
+            <p><strong>Outcome:</strong> Team productivity improved 50%, with 20% fewer defects reaching QA.</p>
+            <span class="case-metric">0 → full E2E framework, 50% productivity gain</span>
+          </article>
+          <article class="case-study">
+            <span class="case-tag">Case study — dLocal</span>
+            <h3>Scaling quality across squads</h3>
+            <p><strong>Challenge:</strong> A fintech unicorn's growing automation suite was accumulating flaky, low-value tests, eroding trust in CI signal across multiple product squads.</p>
+            <p><strong>Approach:</strong> Implemented daily flaky-test monitoring to identify and eliminate low-value tests, and led and coached a 12-engineer QA team through cross-team knowledge-transfer sessions.</p>
+            <p><strong>Outcome:</strong> Automation ROI increased 80%, with 20% better cross-team efficiency.</p>
+            <span class="case-metric">80% automation ROI across 12 engineers</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section id="recommendations" class="band band-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">04</span> Working with Diego</p>
+        <h2 class="statement">Here's what the people I've worked with say.</h2>
+        <div class="reco-carousel" id="recoCarousel" role="group" aria-roledescription="carousel" aria-label="Recommendations">
+          <div class="reco-viewport">
+          <div class="reco-track" id="recoTrack" aria-live="off">
+          <figure class="reco-card">
+            <span class="reco-theme">Ownership &amp; composure</span>
+            <blockquote>
+              <p>He didn't just execute on what was asked. He genuinely cared about the quality of the product and brought that perspective into every test, every bug report, and every team conversation.</p>
+            </blockquote>
+            <figcaption><strong>Jon Hitchcock</strong> Head of Quality Engineering, managed Diego directly at Flex<span class="reco-date">September 2026</span></figcaption>
+          </figure>
+          <figure class="reco-card">
+            <span class="reco-theme">Velocity &amp; quality</span>
+            <blockquote>
+              <p>I had the pleasure of working with Diego at Flex where I watched him successfully lead several workstreams' testing and releasing practices. Diego is a very skilled SDET with a strong understanding of the processes and technical frameworks that make it possible to deliver frequent iterations and high velocity without sacrificing quality.</p>
+            </blockquote>
+            <figcaption><strong>Julio Santos</strong> VP of Engineering - AI, Consumer, Quality and Infra Engineering at Flex, managed Diego directly<span class="reco-date">September 2026</span></figcaption>
+          </figure>
+          <figure class="reco-card">
+            <span class="reco-theme">Reliability &amp; craft</span>
+            <blockquote>
+              <p>One of the best QA engineers I've ever had the pleasure of working with&hellip; Diego is intelligent, reliable, detail oriented, and a great communicator.</p>
+            </blockquote>
+            <figcaption><strong>Adam Nathan</strong> CEO &amp; Cofounder, Blaze, worked with Diego at Almanac and Blaze<span class="reco-date">December 2023</span></figcaption>
+          </figure>
+          <figure class="reco-card">
+            <span class="reco-theme">Leadership &amp; initiative</span>
+            <blockquote>
+              <p>Diego was the champion for several internal initiatives that made our quality and development processes better, like our automated end-to-end suite of tests that shortened our deployment times.</p>
+            </blockquote>
+            <figcaption><strong>Ignacio Capurro</strong> Co-Founder &amp; Managing Partner, Trupropel, managed Diego directly<span class="reco-date">August 2020</span></figcaption>
+          </figure>
+          <figure class="reco-card">
+            <span class="reco-theme">Mentorship &amp; recognition</span>
+            <blockquote>
+              <p>From the second I started working for The Appraisal Lane I felt a great confidence and guidance from Diego. He is a great Professional Leader who did a great job keeping me motivated by recognizing milestones achieved at all times. He also is a great Quality Assurance Engineer and nonetheless a great person.</p>
+            </blockquote>
+            <figcaption><strong>Rodrigo Vazquez</strong> Senior SDET at Wisetack, reported to Diego directly<span class="reco-date">August 2020</span></figcaption>
+          </figure>
+          </div>
+          </div>
+          <div class="reco-controls">
+            <button type="button" class="reco-btn" id="recoPrev" aria-label="Previous recommendation"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="reco-dots">
+              <button type="button" class="reco-dot" aria-label="Show recommendation 1"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 2"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 3"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 4"></button>
+              <button type="button" class="reco-dot" aria-label="Show recommendation 5"></button>
+            </div>
+            <button type="button" class="reco-btn" id="recoNext" aria-label="Next recommendation"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+        <p class="reco-source">Recommendations excerpted from <a href="https://linkedin.com/in/diegogawenda" target="_blank" rel="noopener">LinkedIn</a>.<span class="es-only"> Traducidas del inglés.</span></p>
+      </div>
+    </section>
+
     <!-- About -->
     <section id="about" class="band">
       <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">01</span> A little about me</p>
+        <p class="eyebrow eyebrow-numbered"><span class="num">05</span> A little about me</p>
         <h2 class="statement">I build quality into the system, not bolted onto the end.</h2>
         <p class="lede">
           My career has moved from hands-on manual and automated testing toward test strategy, automation
@@ -117,7 +283,7 @@
     <!-- Expertise -->
     <section id="expertise" class="band band-alt">
       <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">02</span> Expertise</p>
+        <p class="eyebrow eyebrow-numbered"><span class="num">06</span> Expertise</p>
         <h2 class="statement">Quality from every angle.</h2>
         <div class="card-grid">
           <div class="card">
@@ -161,10 +327,47 @@
       </div>
     </section>
 
+    <!-- How I work -->
+    <section class="band">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">07</span> How I work</p>
+        <h2 class="statement">I take ownership of quality, end to end.</h2>
+        <div class="how-grid">
+          <div class="how-card">
+            <h3>Strategy</h3>
+            <p>Define production-readiness criteria and shift-left practices before a single line of test code is written.</p>
+          </div>
+          <div class="how-card">
+            <h3>Execution</h3>
+            <p>Build automation frameworks from zero and wire them into CI/CD as real quality gates, not afterthoughts.</p>
+          </div>
+          <div class="how-card">
+            <h3>Scaling</h3>
+            <p>Grow and coach QA teams, aligning strategy and standards across every product squad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="band band-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-numbered"><span class="num">08</span> How quality moves</p>
+        <h2 class="statement">Quality is a process, not a phase.</h2>
+        <div class="process-row">
+          <div class="process-step"><span class="process-num">01</span><h4>Discover</h4><p>Understand the risk before writing a single test.</p></div>
+          <div class="process-step"><span class="process-num">02</span><h4>Define</h4><p>Set production-readiness criteria and definition-of-done.</p></div>
+          <div class="process-step"><span class="process-num">03</span><h4>Automate</h4><p>Build frameworks that scale with the codebase, not against it.</p></div>
+          <div class="process-step"><span class="process-num">04</span><h4>Monitor</h4><p>Track flaky tests and quality metrics as a living signal.</p></div>
+          <div class="process-step"><span class="process-num">05</span><h4>Improve</h4><p>Feed production learnings back into strategy.</p></div>
+        </div>
+      </div>
+    </section>
+
     <!-- QA Lab -->
     <section id="qa-lab" class="band band-dark">
       <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">03</span> QA Lab</p>
+        <p class="eyebrow eyebrow-numbered"><span class="num">09</span> QA Lab</p>
         <h2 class="statement">This portfolio tests itself.</h2>
         <p class="lede lede-dark">
           A real Playwright suite runs against this site on every deploy — navigation, responsiveness,
@@ -192,32 +395,10 @@
       </div>
     </section>
 
-    <!-- How I work -->
-    <section class="band">
-      <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">04</span> How I work</p>
-        <h2 class="statement">I take ownership of quality, end to end.</h2>
-        <div class="how-grid">
-          <div class="how-card">
-            <h3>Strategy</h3>
-            <p>Define production-readiness criteria and shift-left practices before a single line of test code is written.</p>
-          </div>
-          <div class="how-card">
-            <h3>Execution</h3>
-            <p>Build automation frameworks from zero and wire them into CI/CD as real quality gates, not afterthoughts.</p>
-          </div>
-          <div class="how-card">
-            <h3>Scaling</h3>
-            <p>Grow and coach QA teams, aligning strategy and standards across every product squad.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Experience -->
     <section id="experience" class="band band-alt">
       <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">05</span> Experience</p>
+        <p class="eyebrow eyebrow-numbered"><span class="num">10</span> Experience</p>
         <h2 class="statement">A career built around quality.</h2>
         <ol class="timeline">
           <li class="timeline-item">
@@ -290,44 +471,10 @@
       </div>
     </section>
 
-    <!-- Selected work / case studies -->
-    <section id="work" class="band band-dark">
-      <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">06</span> Selected work</p>
-        <h2 class="statement">Three problems, three systems built to solve them.</h2>
-        <div class="case-grid">
-          <article class="case-study">
-            <span class="case-tag">Case study — Flex</span>
-            <h3>From monthly to weekly releases at fintech speed</h3>
-            <p><strong>Challenge:</strong> A rent-payment fintech shipping weekly, with mobile regression eating days before every release.</p>
-            <p><strong>Approach:</strong> Designed and integrated a mobile automation suite directly into GitHub Actions, rebuilt the QA workload estimation process, and introduced shift-left checks earlier in development.</p>
-            <p><strong>Outcome:</strong> Regression time cut 75%, unlocking daily release cycles instead of weekly, with 80% more predictable delivery forecasts.</p>
-            <span class="case-metric">75% faster regression → daily releases</span>
-          </article>
-          <article class="case-study">
-            <span class="case-tag">Case study — Almanac</span>
-            <h3>Automation built from zero</h3>
-            <p><strong>Challenge:</strong> An async collaboration platform relying entirely on manual regression testing, slowing every release.</p>
-            <p><strong>Approach:</strong> Built an end-to-end Playwright/TypeScript automation framework from scratch and embedded automated checks earlier in the development pipeline.</p>
-            <p><strong>Outcome:</strong> Team productivity improved 50%, with 20% fewer defects reaching QA.</p>
-            <span class="case-metric">0 → full E2E framework, 50% productivity gain</span>
-          </article>
-          <article class="case-study">
-            <span class="case-tag">Case study — dLocal</span>
-            <h3>Scaling quality across squads</h3>
-            <p><strong>Challenge:</strong> A fintech unicorn's growing automation suite was accumulating flaky, low-value tests, eroding trust in CI signal across multiple product squads.</p>
-            <p><strong>Approach:</strong> Implemented daily flaky-test monitoring to identify and eliminate low-value tests, and led and coached a 12-engineer QA team through cross-team knowledge-transfer sessions.</p>
-            <p><strong>Outcome:</strong> Automation ROI increased 80%, with 20% better cross-team efficiency.</p>
-            <span class="case-metric">80% automation ROI across 12 engineers</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Education -->
     <section class="band">
       <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">07</span> Education</p>
+        <p class="eyebrow eyebrow-numbered"><span class="num">11</span> Education</p>
         <h2 class="statement">Building the technical foundation.</h2>
         <div class="edu-grid">
           <div class="edu-card">
@@ -343,130 +490,32 @@
       </div>
     </section>
 
-    <!-- Process -->
-    <section class="band band-alt">
+    <!-- FAQ -->
+    <section id="faq" class="band band-alt">
       <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">08</span> How quality moves</p>
-        <h2 class="statement">Quality is a process, not a phase.</h2>
-        <div class="process-row">
-          <div class="process-step"><span class="process-num">01</span><h4>Discover</h4><p>Understand the risk before writing a single test.</p></div>
-          <div class="process-step"><span class="process-num">02</span><h4>Define</h4><p>Set production-readiness criteria and definition-of-done.</p></div>
-          <div class="process-step"><span class="process-num">03</span><h4>Automate</h4><p>Build frameworks that scale with the codebase, not against it.</p></div>
-          <div class="process-step"><span class="process-num">04</span><h4>Monitor</h4><p>Track flaky tests and quality metrics as a living signal.</p></div>
-          <div class="process-step"><span class="process-num">05</span><h4>Improve</h4><p>Feed production learnings back into strategy.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recommendations -->
-    <section id="recommendations" class="band">
-      <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">09</span> Working with Diego</p>
-        <h2 class="statement">Here's what the people I've worked with say.</h2>
-        <div class="reco-carousel" id="recoCarousel" role="group" aria-roledescription="carousel" aria-label="Recommendations">
-          <div class="reco-viewport">
-          <div class="reco-track" id="recoTrack" aria-live="off">
-          <figure class="reco-card">
-            <span class="reco-theme">Ownership &amp; composure</span>
-            <blockquote>
-              <p>He didn't just execute on what was asked. He genuinely cared about the quality of the product and brought that perspective into every test, every bug report, and every team conversation.</p>
-            </blockquote>
-            <figcaption><strong>Jon Hitchcock</strong> Head of Quality Engineering, managed Diego directly at Flex<span class="reco-date">September 2026</span></figcaption>
-          </figure>
-          <figure class="reco-card">
-            <span class="reco-theme">Velocity &amp; quality</span>
-            <blockquote>
-              <p>I had the pleasure of working with Diego at Flex where I watched him successfully lead several workstreams' testing and releasing practices. Diego is a very skilled SDET with a strong understanding of the processes and technical frameworks that make it possible to deliver frequent iterations and high velocity without sacrificing quality.</p>
-            </blockquote>
-            <figcaption><strong>Julio Santos</strong> VP of Engineering - AI, Consumer, Quality and Infra Engineering at Flex, managed Diego directly<span class="reco-date">September 2026</span></figcaption>
-          </figure>
-          <figure class="reco-card">
-            <span class="reco-theme">Reliability &amp; craft</span>
-            <blockquote>
-              <p>One of the best QA engineers I've ever had the pleasure of working with&hellip; Diego is intelligent, reliable, detail oriented, and a great communicator.</p>
-            </blockquote>
-            <figcaption><strong>Adam Nathan</strong> CEO &amp; Cofounder, Blaze, worked with Diego at Almanac and Blaze<span class="reco-date">December 2023</span></figcaption>
-          </figure>
-          <figure class="reco-card">
-            <span class="reco-theme">Leadership &amp; initiative</span>
-            <blockquote>
-              <p>Diego was the champion for several internal initiatives that made our quality and development processes better, like our automated end-to-end suite of tests that shortened our deployment times.</p>
-            </blockquote>
-            <figcaption><strong>Ignacio Capurro</strong> Co-Founder &amp; Managing Partner, Trupropel, managed Diego directly<span class="reco-date">August 2020</span></figcaption>
-          </figure>
-          <figure class="reco-card">
-            <span class="reco-theme">Mentorship &amp; recognition</span>
-            <blockquote>
-              <p>From the second I started working for The Appraisal Lane I felt a great confidence and guidance from Diego. He is a great Professional Leader who did a great job keeping me motivated by recognizing milestones achieved at all times. He also is a great Quality Assurance Engineer and nonetheless a great person.</p>
-            </blockquote>
-            <figcaption><strong>Rodrigo Vazquez</strong> Senior SDET at Wisetack, reported to Diego directly<span class="reco-date">August 2020</span></figcaption>
-          </figure>
-          </div>
-          </div>
-          <div class="reco-controls">
-            <button type="button" class="reco-btn" id="recoPrev" aria-label="Previous recommendation"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <div class="reco-dots">
-              <button type="button" class="reco-dot" aria-label="Show recommendation 1"></button>
-              <button type="button" class="reco-dot" aria-label="Show recommendation 2"></button>
-              <button type="button" class="reco-dot" aria-label="Show recommendation 3"></button>
-              <button type="button" class="reco-dot" aria-label="Show recommendation 4"></button>
-              <button type="button" class="reco-dot" aria-label="Show recommendation 5"></button>
-            </div>
-            <button type="button" class="reco-btn" id="recoNext" aria-label="Next recommendation"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div>
-        </div>
-        <p class="reco-source">Recommendations excerpted from <a href="https://linkedin.com/in/diegogawenda" target="_blank" rel="noopener">LinkedIn</a>.<span class="es-only"> Traducidas del inglés.</span></p>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="band band-alt">
-      <div class="container">
-        <p class="eyebrow eyebrow-numbered"><span class="num">10</span> Services</p>
-        <h2 class="statement tailored">
-          <span class="tailored-lead">Every engagement</span>
-          <span class="tailored-line">built around you.</span>
-          <span class="tailored-line" aria-hidden="true">built around you.</span>
-          <span class="tailored-line" aria-hidden="true">built around you.</span>
-        </h2>
-        <p class="lede">No off-the-shelf testing programs. I design each engagement from scratch, starting from your team's real challenges. The diagnosis comes first. The proposal comes after.</p>
-        <div class="service-grid">
-          <article class="service-card">
-            <span class="service-tag">Diagnose &amp; plan</span>
-            <h3>Testing Assessment</h3>
-            <p>A full evaluation of how testing works in your company today, and a clear action plan to resolve the pain points and improve quality.</p>
-            <h4>What you get</h4>
-            <ul class="service-list">
-              <li>A review of your test strategy, automation, CI signal and release process</li>
-              <li>Conversations with engineering, QA and product to find the real pain points</li>
-              <li>A prioritized action plan with quick wins and a longer-term roadmap</li>
-            </ul>
-            <p class="service-fit"><strong>Best for:</strong> teams with flaky suites, slow regressions, escaped bugs or no clear testing strategy.</p>
-            <a class="btn btn-primary" href="mailto:diegogawenda@gmail.com?subject=Testing%20Assessment">Request an assessment</a>
-          </article>
-          <article class="service-card">
-            <span class="service-tag">Plan &amp; support</span>
-            <h3>Testing Partnership</h3>
-            <p>Ongoing support for your testing: an action plan plus follow-up meetings to guide and back your team while the plan is implemented.</p>
-            <h4>What you get</h4>
-            <ul class="service-list">
-              <li>An action plan tailored to your team and product</li>
-              <li>Regular follow-up meetings to review progress and unblock the work</li>
-              <li>Hands-on guidance on implementation, adjusting priorities as you learn</li>
-            </ul>
-            <p class="service-fit"><strong>Best for:</strong> teams that want an experienced partner alongside them as they put better testing in place.</p>
-            <a class="btn btn-primary" href="mailto:diegogawenda@gmail.com?subject=Testing%20Partnership">Talk about a partnership</a>
-          </article>
-        </div>
-        <div class="service-process">
-          <p class="service-tag">How a partnership works</p>
-          <h3>From first call to results.</h3>
-          <div class="process-row process-row-4">
-            <div class="process-step"><span class="process-num">01</span><h4>Discovery call</h4><p>30 minutes to understand your testing challenge and see if we're the right match.</p></div>
-            <div class="process-step"><span class="process-num">02</span><h4>Diagnosis</h4><p>Before proposing anything, I listen and look: interviews, a review of your tests and pipeline, or a full assessment, depending on the case.</p></div>
-            <div class="process-step"><span class="process-num">03</span><h4>Tailored action plan</h4><p>A specific plan with goals, priorities, tooling and the metrics that will show progress.</p></div>
-            <div class="process-step"><span class="process-num">04</span><h4>Implementation</h4><p>Your team executes with my guidance, and follow-up meetings track the real impact.</p></div>
-          </div>
+        <p class="eyebrow eyebrow-numbered"><span class="num">12</span> FAQ</p>
+        <h2 class="statement">Questions before we talk.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Who is this for?</summary>
+            <p>Engineering teams that ship software and want testing to catch more problems with less friction. If you have no QA yet, an assessment is a good starting point. If you already have a team, I work alongside it.</p>
+          </details>
+          <details>
+            <summary>Do I have to choose between the two plans?</summary>
+            <p>No. Many teams start with an assessment and decide afterwards whether they want support while the plan is implemented. A partnership can also start directly if you already know your pain points.</p>
+          </details>
+          <details>
+            <summary>How do we start?</summary>
+            <p>With a 30-minute discovery call to understand your challenge and see if we are a good match. Nothing else is decided on that call.</p>
+          </details>
+          <details>
+            <summary>Will this replace my QA team?</summary>
+            <p>No. The goal is to strengthen it. I assess, plan and coach, and your team keeps ownership of the work.</p>
+          </details>
+          <details>
+            <summary>Can we sign an NDA first?</summary>
+            <p>Yes. I am happy to sign one before looking at anything internal.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -477,12 +526,14 @@
         <h2 class="cta-headline">Let's fix your testing problem — for good.</h2>
         <p class="cta-sub">Testing assessments and hands-on support for teams that want to ship faster with fewer surprises.</p>
         <div class="contact-links">
-          <a href="mailto:diegogawenda@gmail.com" class="btn btn-light">diegogawenda@gmail.com</a>
+          <a href="mailto:diegogawenda@gmail.com?subject=Discovery%20call" class="btn btn-light" data-book>Book a 30-minute call</a>
+          <a href="mailto:diegogawenda@gmail.com" class="btn btn-outline-light">diegogawenda@gmail.com</a>
           <a href="https://linkedin.com/in/diegogawenda" class="btn btn-outline-light" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <p class="cta-quote">"Quality is not the last step. It's part of how you build."</p>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">

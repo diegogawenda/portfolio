@@ -20,7 +20,7 @@ test.describe('Negative & Edge Cases', () => {
     await expect(portfolio.heroHeading).toHaveText('Diego Gawenda');
     await expect(portfolio.heroTagline).toBeVisible();
     await expect(portfolio.heroPhotoImg).toBeVisible();
-    await expect(portfolio.navLinks).toHaveCount(6);
+    await expect(portfolio.navLinks).toHaveCount(7);
 
     // And the mobile nav toggle and the QA Lab panel simply do nothing
     // rather than throwing errors, since no JS runs at all (expected

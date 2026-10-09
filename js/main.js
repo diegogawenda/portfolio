@@ -1,3 +1,15 @@
+// Put your Calendly / Cal.com link here. Until then, every "Book a call"
+// button falls back to the mailto link in its href.
+const BOOKING_URL = '';
+
+if (BOOKING_URL) {
+  document.querySelectorAll('[data-book]').forEach((a) => {
+    a.href = BOOKING_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+}
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
