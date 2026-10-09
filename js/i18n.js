@@ -237,8 +237,8 @@ const es = {
   'built around you.': 'a tu medida.',
   'No off-the-shelf testing programs. I design each engagement from scratch, starting from your team\'s real challenges. The diagnosis comes first. The proposal comes after.':
     'No tengo programas genéricos. Diseño cada servicio desde cero, partiendo de los desafíos reales de tu equipo. El diagnóstico va primero. La propuesta viene después.',
-  'Option 1': 'Opción 1',
-  'Option 2': 'Opción 2',
+  'Diagnose & plan': 'Diagnóstico y plan',
+  'Plan & support': 'Plan y acompañamiento',
   'Testing Assessment': 'Evaluación de Testing',
   'A full evaluation of how testing works in your company today, and a clear action plan to resolve the pain points and improve quality.':
     'Una evaluación completa de cómo funciona hoy el testing en tu empresa y un plan de acción claro para resolver los puntos de dolor y mejorar la calidad.',
